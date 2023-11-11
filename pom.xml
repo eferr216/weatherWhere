@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.matc.entjava.userdisplayexercise</groupId>
-  <artifactId>userdisplayexercise</artifactId>
+  <groupId>com.eferreira</groupId>
+  <artifactId>weatherwhere</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>userdisplayexercise Maven Webapp</name>
+  <name>weatherwhere Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -16,7 +16,7 @@
     <!-- TODO make sure your mysql driver version matches your mysql version -->
     <mysql-version>8.0.16</mysql-version>
     <jstl-version>1.2</jstl-version>
-    <log4j-version>2.1.0</log4j-version>
+    <log4j-version>2.10.0</log4j-version>
     <jupiter-version>5.0.0</jupiter-version>
     <junit-platform-runner-version>1.0.0</junit-platform-runner-version>
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
