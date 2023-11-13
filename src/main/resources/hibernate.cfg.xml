@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/item</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">student</property>
+
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+
+        <mapping class="edu.matc.entity.Item"/>
+
+        <!--<property name="connection.username">root</property>
+        <property name="connection.password">student</property>-->
+
+        <!--<mapping class="com.paulawaite.fbtr.entity.Difficulty"/>
+        <mapping class="com.paulawaite.fbtr.entity.GroomingType"/>
+        <mapping class="com.paulawaite.fbtr.entity.Role"/>
+        <mapping class="com.paulawaite.fbtr.entity.Trail"/>
+        <mapping class="com.paulawaite.fbtr.entity.TrailReport"/>
+        <mapping class="com.paulawaite.fbtr.entity.TrailType"/>
+        <mapping class="com.paulawaite.fbtr.entity.User"/>
+        <mapping class="com.paulawaite.fbtr.entity.Location"/>-->
+
+    </session-factory>
+
+</hibernate-configuration>

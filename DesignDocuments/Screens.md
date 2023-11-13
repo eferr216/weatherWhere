@@ -4,11 +4,11 @@
 
 ![Home Page](wireframes/weather_where_6.jpg)
 
-### Add New Clothing Item Page
+### Add New Clothing edu.matc.entity.Item Page
 
 ![Add Clothing](wireframes/weather_where_2.jpg)
 
-### Edit Clothing Item Page
+### Edit Clothing edu.matc.entity.Item Page
 
 ![Add New Trail](wireframes/weather_where_1.jpg)
 
