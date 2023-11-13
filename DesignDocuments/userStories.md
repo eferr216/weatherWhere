@@ -22,7 +22,7 @@ As a registered user, I want to be able to be able to add new clothing items to 
 
 ### Edit Clothing Items In Inventory
 
-As a regutered user, I want to be able to edit clothing items in my inventory.*
+As a registered user, I want to be able to edit clothing items in my inventory.*
 
 ### Password Reset
 
