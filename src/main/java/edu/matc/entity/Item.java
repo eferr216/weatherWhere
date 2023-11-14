@@ -1,13 +1,28 @@
 package edu.matc.entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
 /**
  * A class to represent a clothing item
  */
+@Entity(name="Item")
+@Table(name="item")
 public class Item {
-    private int id;
+    @Column(name = "item_name")
     private String itemName;
+
+    @Column(name = "item_description")
     private String itemDescription;
+
+    @Column(name = "item_category")
     private String itemCategory;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    private int id;
 
     /**
      * Instantiates a new User.
@@ -16,6 +31,7 @@ public class Item {
     }
 
     /**
+     * Instantiates a new Item.
      *
      * @param id
      * @param itemName
@@ -23,9 +39,13 @@ public class Item {
      * @param itemCategory
      */
     public Item(int id, String itemName, String itemDescription, String itemCategory) {
+
         this.id = id;
+
         this.itemName = itemName;
+
         this.itemDescription = itemDescription;
+
         this.itemCategory = itemCategory;
     }
 

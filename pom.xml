@@ -13,6 +13,7 @@
     <junit.version>4.12</junit.version>
     <junit-vintage-version>4.12.0</junit-vintage-version>
     <javax.version>7.0</javax.version>
+    <javax.persistence-api.version>7.0</javax.persistence-api.version>
     <!-- TODO make sure your mysql driver version matches your mysql version -->
     <mysql-version>8.0.16</mysql-version>
     <jstl-version>1.2</jstl-version>
@@ -22,6 +23,7 @@
     <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
     <maven-surefire-plugin-version>2.19</maven-surefire-plugin-version>
     <hibernate-core.version>5.2.12.Final</hibernate-core.version>
+    <hibernate-c3p0.version>5.2.12.Final</hibernate-c3p0.version>
   </properties>
 
   <dependencies>
@@ -86,6 +88,13 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>${hibernate-core.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>${hibernate-c3p0.version}</version>
     </dependency>
 
   </dependencies>
