@@ -35,7 +35,7 @@ class ItemDaoTest {
     @Test
     void getAllItemsSuccess() {
         List<Item> items = itemDao.getAllItems();
-        assertEquals(13, items.size());
+        assertEquals(5, items.size());
     }
 
     /**
@@ -76,9 +76,9 @@ class ItemDaoTest {
     @Test
     void insertSuccess() {
 
-        Item newItem = new Item(16, "Yellow boots", "Yellow boots made for snowy climates", "Footwear");
+        Item newItem = new Item(18,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
         int id = itemDao.insert(newItem);
-        assertEquals(16, id);
+        assertEquals(18, id);
         Item insertedItem = itemDao.getById(id);
         assertEquals("Yellow boots", insertedItem.getItemName());
     }
@@ -88,8 +88,8 @@ class ItemDaoTest {
      */
     @Test
     void deleteSuccess() {
-        itemDao.delete(itemDao.getById(16));
-        assertNull(itemDao.getById(16));
+        itemDao.delete(itemDao.getById(5));
+        assertNull(itemDao.getById(5));
     }
 
     /**

@@ -25,7 +25,6 @@ public class Database {
     private static Database instance = new Database();
 
     private Properties properties;
-
     private Connection connection;
 
     // private constructor prevents instantiating this class anywhere else
@@ -101,24 +100,30 @@ public class Database {
 
     /**
      * Run the sql.
+     * @param sqlFile the sql file to be read and executed line by line.
      */
     public void runSQL(String sqlFile) {
 
         Statement stmt = null;
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream inputStream = classLoader.getResourceAsStream(sqlFile);
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        //InputStream inputStream = classLoader.getResourceAsStream(sqlFile);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(classLoader.getResourceAsStream(sqlFile)))) {
 
-            Class.forName("com.mysql.jdbc.Driver");
             connect();
             stmt = connection.createStatement();
 
-            while (true) {
-                String sql = br.readLine();
-                if (sql == null) {
-                    break;
+            String sql = "";
+
+            while (br.ready()) {
+                char inputValue = (char)br.read();
+
+                if (inputValue == ';') {
+                    stmt.executeUpdate(sql);
+                    sql = "";
                 }
-                stmt.executeUpdate(sql);
+                else {
+                    sql += inputValue;
+                }
 
             }
 
