@@ -3,8 +3,6 @@ package edu.matc.test.util;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.awt.dnd.DropTarget;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,6 +33,9 @@ public class Database {
         loadProperties();
     }
 
+    /**
+     * Establish a connection to the database.
+     */
     private void loadProperties() {
         properties = new Properties();
         try {
@@ -49,15 +50,26 @@ public class Database {
 
     }
 
-    // get the only Database object available
+    /**
+     * Get the only Database object available.
+     * @return
+     */
     public static Database getInstance() {
         return instance;
     }
 
+    /**
+     * Get the connection.
+     * @return
+     */
     public Connection getConnection() {
         return connection;
     }
 
+    /**
+     * Connect to the database.
+     * @throws Exception
+     */
     public void connect() throws Exception {
         if (connection != null)
             return;
@@ -72,6 +84,9 @@ public class Database {
         connection = DriverManager.getConnection(url, properties.getProperty("username"), properties.getProperty("password"));
     }
 
+    /**
+     * Disconnect from the database.
+     */
     public void disconnect() {
         if (connection != null) {
             try {

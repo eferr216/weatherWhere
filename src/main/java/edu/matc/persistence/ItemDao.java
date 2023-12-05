@@ -1,7 +1,6 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Item;
-import javassist.expr.Expr;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +23,7 @@ public class ItemDao {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
-     *
+     * This method gets all of the items.
      * @return all items
      */
     public List<Item> getAllItems() {
@@ -38,6 +37,7 @@ public class ItemDao {
     }
 
     /**
+     * This method gets an item by itemCategory.
      * @return an item
      */
     public List<Item> getItemsByCategory(String itemCategory) {
@@ -66,6 +66,7 @@ public class ItemDao {
     }
 
     /**
+     * Update an item.
      * @param item
      */
     public void saveOrUpdate(Item item) {

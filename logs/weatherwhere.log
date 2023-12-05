@@ -2,3 +2,88 @@
 [DEBUG] 2023-12-04 21:42:16.387 [main] ItemDao - Searching for item with itemCategory = Footwear
 [DEBUG] 2023-12-04 21:44:08.626 [main] ItemDao - Searching for item with itemCategory = Footwear
 [DEBUG] 2023-12-04 21:49:14.570 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-04 23:49:24.013 [main] Database - java.sql.SQLSyntaxErrorException: Unknown database 'test_item'
+[DEBUG] 2023-12-04 23:49:24.100 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-04 23:49:44.327 [main] Database - java.sql.SQLSyntaxErrorException: Unknown database 'test_item'
+[ERROR] 2023-12-04 23:50:04.877 [main] Database - java.sql.SQLSyntaxErrorException: Unknown database 'test_item'
+[ERROR] 2023-12-05 00:35:10.434 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:25:31.175 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:35:00.351 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:38:29.344 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.310 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.468 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.660 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:40:26.661 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:40:26.699 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:40:26.700 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:40:26.723 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.743 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.764 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:40:26.821 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:01.789 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:01.928 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:02.106 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:42:02.107 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:42:02.159 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:42:02.160 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:42:02.197 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:02.229 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:02.253 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:42:02.304 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.175 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.347 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.519 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:43:16.520 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:43:16.571 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 01:43:16.572 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 01:43:16.607 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.624 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.659 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 01:43:16.701 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.116 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.288 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.455 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:12:02.455 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:12:02.499 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:12:02.501 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:12:02.528 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.548 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.577 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:12:02.612 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:01.763 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:01.862 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:02.040 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:16:02.040 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:16:02.094 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:16:02.095 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:16:02.132 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:02.153 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:02.182 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:16:02.245 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:25.591 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:25.731 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:25.922 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:19:25.923 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:19:25.985 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 02:19:25.987 [main] ItemDao - Searching for item with itemCategory = Footwear
+[ERROR] 2023-12-05 02:19:26.013 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:26.035 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:26.056 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 02:19:26.108 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:19:23.209 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 11:19:23.291 [main] ItemDao - Searching for item with itemCategory = Snowpants
+[ERROR] 2023-12-05 11:20:16.751 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 11:20:16.846 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-05 11:20:31.032 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 11:20:31.110 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-05 11:38:32.839 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:38:32.981 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:38:33.202 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 11:38:33.211 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-05 11:38:33.259 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[DEBUG] 2023-12-05 11:38:33.260 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-05 11:38:33.297 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:38:33.317 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:38:33.338 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:38:33.396 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[ERROR] 2023-12-05 11:39:56.154 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1

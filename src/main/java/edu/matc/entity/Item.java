@@ -50,34 +50,66 @@ public class Item {
         this.itemCategory = itemCategory;
     }
 
+    /**
+     * The setter method for the id instance variable.
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * The getter method for the id instance variable.
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * The setter method for the itemName instance variable.
+     * @param itemName
+     */
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
+    /**
+     * The getter method for the itemName instance variable.
+     * @return the itemName
+     */
     public String getItemName() {
         return itemName;
     }
 
+    /**
+     * The setter method for the itemDescription instance variable.
+     * @param itemDescription
+     */
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
     }
 
+    /**
+     * The getter method for the itemDescription instance variable.
+     * @return the itemDescription
+     */
     public String getItemDescription() {
         return itemDescription;
     }
 
+    /**
+     * The setter method for the itemCategory instance variable.
+     * @param itemCategory
+     */
     public void setItemCategory(String itemCategory) {
         this.itemCategory = itemCategory;
     }
 
+    /**
+     * The getter method for the itemCategory instance variable.
+     * @return the itemCategory
+     */
     public String getItemCategory() {
         return itemCategory;
     }
