@@ -1,7 +1,8 @@
 package edu.matc.controller;
 
 import edu.matc.persistence.ItemDao;
-import edu.matc.persistence.ItemData;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,19 +20,31 @@ import java.io.IOException;
         urlPatterns = {"/searchItem"}
 )
 public class SearchItems extends HttpServlet {
+    private final Logger logger = LogManager.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        //ItemData itemData = new ItemData();
-        ItemDao itemDao = new ItemDao();
 
-        if (req.getParameter("submit").equals("search")) {
-            req.setAttribute("items", itemDao.getItemsByCategory());
+        ItemDao itemDao = new ItemDao();
+        String clickedLink = req.getParameter("link");
+
+        if (clickedLink.equals("clothing")) {
+            req.setAttribute("items", itemDao.getAllItems());
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
+            dispatcher.forward(req, res);
         }
+        else if (req.getParameter("submit").equals("Search")) {
+            req.setAttribute("items", itemDao.getItemsByCategory(req.getParameter("itemCategory")));
+        }
+        /*else if (req.getParameter("submit").equals("Submit")) {
+            req.setAttribute("items", itemDao.insert(req.getParameter("itemCategory")));
+        }*/
         else {
             req.setAttribute("items", itemDao.getAllItems());
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+            dispatcher.forward(req, res);
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
-        dispatcher.forward(req, res);
+        //RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        //dispatcher.forward(req, res);
     }
 }

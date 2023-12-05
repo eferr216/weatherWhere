@@ -1,0 +1,4 @@
+[DEBUG] 2023-12-04 21:41:20.333 [main] ItemDao - Searching for item with itemCategory = Footwear
+[DEBUG] 2023-12-04 21:42:16.387 [main] ItemDao - Searching for item with itemCategory = Footwear
+[DEBUG] 2023-12-04 21:44:08.626 [main] ItemDao - Searching for item with itemCategory = Footwear
+[DEBUG] 2023-12-04 21:49:14.570 [main] ItemDao - Searching for item with itemCategory = Footwear

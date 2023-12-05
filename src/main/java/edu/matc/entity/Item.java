@@ -22,10 +22,11 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
+    @Column(name = "item_id")
     private int id;
 
     /**
-     * Instantiates a new User.
+     * Instantiates a new Item.
      */
     public Item() {
     }
