@@ -4,6 +4,8 @@ Document how your week in Ent Java went. You may use whatever format suits you, 
 
 ### Week 4 work
 
-2/12/2016 - 7 hours
+2/12/2016 - 14 hours
 
-Completed all Checkpoint 1 items for the project.
+Completed all Checkpoint 1 items for the project. Built the basic functionality for the project including setting up test DB and hibernate.
+
+### Week 5 work
