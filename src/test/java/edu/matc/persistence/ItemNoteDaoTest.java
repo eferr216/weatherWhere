@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ItemNoteDaoTest {
     ItemNoteDao itemNoteDao;
+    GenericDao genericDao;
 
     /**
      * Setup.
@@ -26,6 +27,7 @@ public class ItemNoteDaoTest {
     void setUp() {
 
         itemNoteDao = new ItemNoteDao();
+        genericDao = new GenericDao(ItemNote.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -37,7 +39,7 @@ public class ItemNoteDaoTest {
      */
     @Test
     void getAllItemNotesSuccess() {
-        List<ItemNote> itemNotes = itemNoteDao.getAllItemNotes();
+        List<ItemNote> itemNotes = genericDao.getAll();
         assertEquals(5, itemNotes.size());
     }
 
@@ -48,9 +50,8 @@ public class ItemNoteDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        ItemNote retrievedItemNote = itemNoteDao.getById(5);
+        ItemNote retrievedItemNote = (ItemNote) genericDao.getById(5);
         assertNotNull(retrievedItemNote);
-        //assertEquals("Snowpants", retrievedItemNote.getItemNoteName());
     }
 
     /**
@@ -59,10 +60,10 @@ public class ItemNoteDaoTest {
     @Test
     void saveOrUpdateSuccess() {
         String newItemNoteText = "Default Item Note Text";
-        ItemNote itemNoteToUpdate = itemNoteDao.getById(3);
+        ItemNote itemNoteToUpdate = (ItemNote) genericDao.getById(3);
         itemNoteToUpdate.setNoteText(newItemNoteText);
-        itemNoteDao.saveOrUpdate(itemNoteToUpdate);
-        ItemNote retrievedItemNote = itemNoteDao.getById(3);
+        genericDao.saveOrUpdate(itemNoteToUpdate);
+        ItemNote retrievedItemNote = (ItemNote) genericDao.getById(3);
         assertEquals(newItemNoteText, retrievedItemNote.getNoteText());
     }
 
@@ -77,13 +78,12 @@ public class ItemNoteDaoTest {
         ItemNote newItemNote = new ItemNote("This is a new note for test purposes", item);
         item.addItemNote(newItemNote);
 
-        int id = itemNoteDao.insert(newItemNote);
+        int id = genericDao.insert(newItemNote);
 
         assertNotEquals(0, id);
-        ItemNote insertedItemNote = itemNoteDao.getById(id);
+        ItemNote insertedItemNote = (ItemNote) genericDao.getById(id);
         assertEquals("This is a new note for test purposes", insertedItemNote.getNoteText());
         assertNotNull(insertedItemNote.getItem());
-        //assertEquals("", insertedItemNote.getItem().getItemName());
     }
 
     /**
@@ -91,8 +91,8 @@ public class ItemNoteDaoTest {
      */
     @Test
     void deleteSuccess() {
-        itemNoteDao.delete(itemNoteDao.getById(6));
-        assertNull(itemNoteDao.getById(6));
+        genericDao.delete(genericDao.getById(5));
+        assertNull(genericDao.getById(5));
     }
 
     /**
@@ -100,7 +100,7 @@ public class ItemNoteDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<ItemNote> itemNotes = itemNoteDao.getByPropertyEqual("noteText", "Wear these a lot");
+        List<ItemNote> itemNotes = genericDao.getByPropertyEqual("noteText", "Wear these a lot");
         assertEquals(1, itemNotes.size());
     }
 
@@ -109,7 +109,7 @@ public class ItemNoteDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<ItemNote> itemNotes = itemNoteDao.getByPropertyLike("noteText", "w");
+        List<ItemNote> itemNotes = genericDao.getByPropertyLike("noteText", "w");
         assertEquals(2, itemNotes.size());
     }
 

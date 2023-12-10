@@ -498,3 +498,5 @@
 [ERROR] 2023-12-10 00:00:59.630 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
 [DEBUG] 2023-12-10 00:20:33.248 [main] ItemNoteDao - Searching for item note with noteText = Wear these a lot
 [DEBUG] 2023-12-10 00:21:28.341 [main] ItemNoteDao - Searching for item note with noteText = w
+[DEBUG] 2023-12-10 17:27:13.797 [main] GenericDao - Searching for item note with noteText = Wear these a lot
+[DEBUG] 2023-12-10 17:29:25.269 [main] GenericDao - Searching for item note with noteText = w
