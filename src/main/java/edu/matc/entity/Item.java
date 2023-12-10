@@ -4,10 +4,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
- * A class to represent a clothing item
+ * A class to represent a clothing item.
  */
 @Entity(name="Item")
 @Table(name="item")
@@ -172,6 +173,10 @@ public class Item {
         itemNote.setItem(null);
     }
 
+    /**
+     * The toString method.
+     * @return a string representation of this class's object.
+     */
     @Override
     public String toString() {
         return "Item{"+
@@ -180,6 +185,26 @@ public class Item {
                 ", itemCategory='" + itemCategory + '\'' + '}';
     }
 
+    /**
+     * This method compares two objects for equality.
+     * @param o an Object
+     * @return a boolean indicating whether both objects are equal.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return id == item.id && Objects.equals(itemName, item.itemName) && Objects.equals(itemDescription, item.itemDescription) && Objects.equals(itemCategory, item.itemCategory);
+    }
 
 
+    /**
+     * The hashCode method.
+     * @return a hashcode
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(itemName, itemDescription, itemCategory, id);
+    }
 }

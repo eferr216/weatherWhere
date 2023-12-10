@@ -3,7 +3,11 @@ package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 
+/**
+ * This class represents an item note.
+ */
 @Entity(name = "ItemNote")
 @Table(name = "item_note")
 public class ItemNote {
@@ -84,6 +88,10 @@ public class ItemNote {
         this.item = item;
     }
 
+    /**
+     * The toString method.
+     * @return a string representation of this class's object.
+     */
     @Override
     public String toString() {
         return "ItemNote{" +
@@ -93,4 +101,25 @@ public class ItemNote {
                 '}';
     }
 
+    /**
+     * This method compares two objects for equality.
+     * @param o an Object
+     * @return a boolean indicating whether both objects are equal.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ItemNote itemNote = (ItemNote) o;
+        return id == itemNote.id && Objects.equals(noteText, itemNote.noteText);
+    }
+
+    /**
+     * The hashCode method.
+     * @return a hashcode
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, noteText);
+    }
 }
