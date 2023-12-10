@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styless.css">
 <body>
 <jsp:include page="navigation.jsp" />
 <h1>Clothes</h1>
@@ -11,9 +11,18 @@
         <div class="row">
         <c:forEach items="${items}" var="item">
                     <div class="clothingDivs col-6-xs col-4-sm col-4-md">
-                        <p><span class="clothingAttributeNameStyles">Item Name: </span>${item.itemName}</p>
-                        <p><span class="clothingAttributeNameStyles">Item Description: </span>${item.itemDescription}</p>
-                        <p><span class="clothingAttributeNameStyles">Item Category: </span>${item.itemCategory}</p>
+                        <form action="searchItem?delete_id=${item.id}" method="post">
+                            <div class="itemAttributesDiv">
+                                <p><span class="clothingAttributeNameStyles">Item Name: </span>${item.itemName}</p>
+                                <p><span class="clothingAttributeNameStyles">Item Description: </span>${item.itemDescription}</p>
+                                <p><span class="clothingAttributeNameStyles">Item Category: </span>${item.itemCategory}</p>
+                                <c:forEach items="${item.itemNotes}" var="itemNote">
+                                    <p>Note: ${itemNote.noteText}</p>
+                                </c:forEach>
+                                <input class="deleteSubmitButton" type="submit" name="delete" value="Delete">
+                                <input type="submit" name="edit" value="Edit">
+                            </div>
+                        </form>
                     </div>
         </c:forEach>
         </div>

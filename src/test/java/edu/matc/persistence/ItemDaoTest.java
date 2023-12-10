@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Item;
+import edu.matc.entity.ItemNote;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -83,6 +84,23 @@ class ItemDaoTest {
         assertEquals("Yellow boots", insertedItem.getItemName());
     }
 
+    //@Test
+    /*void insertWithItemNoteSuccess() {
+
+        Item newItem = new Item(6, "Wool scarf", "A red wool scarf made in Alaska.", "Headwear");
+
+        String noteText = "This scarf is a little itchy at times.";
+        ItemNote itemNote = new ItemNote(noteText, newItem);
+
+        newItem.addItemNote(itemNote);
+
+        int id = itemDao.insert(newItem);
+        assertNotEquals(0,id);
+        Item insertedItem = itemDao.getById(id);
+        assertEquals("Wool scarf", insertedItem.getItemName());
+
+    }*/
+
     /**
      * Tests the delete method.
      */
@@ -107,7 +125,7 @@ class ItemDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Item> items = itemDao.getPropertyLike("itemCategory", "Pants");
+        List<Item> items = itemDao.getByPropertyLike("itemCategory", "Pants");
         assertEquals(1, items.size());
     }
 }

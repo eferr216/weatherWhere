@@ -128,7 +128,7 @@ public class ItemDao {
      * Get item by property (like)
      * sample usage: getPropertyLike("itemName", "Grey sweater")
      */
-    public List<Item> getPropertyLike(String propertyName, String value) {
+    public List<Item> getByPropertyLike(String propertyName, String value) {
         Session session = sessionFactory.openSession();
 
         logger.debug("Searching for item with {} = {}", propertyName, value);

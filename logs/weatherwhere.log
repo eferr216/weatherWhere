@@ -103,3 +103,398 @@
 [DEBUG] 2023-12-05 16:19:50.098 [main] ItemDao - Searching for item with itemCategory = Pants
 [DEBUG] 2023-12-05 16:20:47.095 [main] ItemDao - Searching for item with itemCategory = Pants
 [DEBUG] 2023-12-05 16:20:47.147 [main] ItemDao - Searching for item with itemCategory = Pants
+[DEBUG] 2023-12-07 20:20:06.210 [main] ItemDao - Searching for item with itemCategory = Pants
+[DEBUG] 2023-12-07 20:20:06.276 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 20:18:58.472 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:18:58.645 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:18:58.868 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:18:58.913 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:18:58.919 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:18:58.975 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:18:58.976 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:18:59.006 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:18:59.049 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:19:37.124 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:19:37.281 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:19:37.480 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:19:37.517 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:19:37.523 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:19:37.586 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:19:37.587 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:19:37.636 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:19:37.680 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:22:38.942 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:22:39.100 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:22:39.286 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:22:39.330 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:22:39.339 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:22:39.399 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:22:39.400 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:22:39.447 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:22:39.488 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:24:25.321 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:24:25.474 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:24:25.663 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:24:25.706 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:24:25.725 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:24:25.786 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:24:25.788 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:24:25.820 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:24:25.847 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:25:55.328 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:25:55.504 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:25:55.703 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:25:55.748 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:25:55.754 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:25:55.828 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:25:55.829 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:25:55.878 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:25:55.913 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:08.363 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:08.521 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:08.703 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:08.756 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:27:08.762 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:27:08.820 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:27:08.822 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:27:08.867 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:08.904 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:24.459 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:24.632 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:24.831 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:24.880 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:27:24.899 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:27:24.963 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:27:24.963 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:27:24.994 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:27:25.037 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:51:10.957 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:51:11.130 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:51:11.332 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:51:11.379 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:51:11.391 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 20:51:11.470 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 20:51:11.471 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 20:51:11.517 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 20:51:11.554 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:04:30.410 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:04:30.585 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:04:30.807 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:04:30.857 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:04:30.864 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:04:30.943 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:04:30.945 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:04:30.998 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:05:21.560 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:06:12.475 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:07:02.983 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:07:03.004 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:07:53.908 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:08:44.471 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:09:34.525 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:10:25.050 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[DEBUG] 2023-12-09 22:10:25.052 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 22:11:15.581 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[DEBUG] 2023-12-09 22:11:15.583 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 22:12:06.044 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:12:06.061 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:12:56.525 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:12:57.042 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:12:57.272 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:12:57.319 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:12:57.326 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:12:57.386 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:12:57.387 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:12:57.439 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:24.853 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:25.025 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:25.245 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:25.280 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:13:25.296 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:13:25.363 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:13:25.364 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:13:25.409 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:59.452 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:59.627 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:59.843 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:13:59.878 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:13:59.884 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:13:59.964 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:13:59.965 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:14:00.014 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:14:50.616 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:15:41.152 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:16:31.749 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:20:24.601 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:20:24.771 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:20:24.978 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:20:25.021 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:20:25.037 [main] ItemNoteDao - Searching for item note with noteText = Random Note.
+[ERROR] 2023-12-09 22:20:25.105 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 22:20:25.106 [main] ItemNoteDao - Searching for item note with noteText = r
+[ERROR] 2023-12-09 22:20:25.147 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:20:25.178 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 22:24:41.570 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:24:41.733 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:24:41.965 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:24:41.993 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:24:42.000 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:24:42.079 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:24:42.080 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:24:42.125 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:25:32.716 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:26:23.254 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:27:13.774 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:28:52.925 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:28:53.062 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:28:53.258 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:28:53.299 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:28:53.308 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:28:53.378 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:28:53.379 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:28:53.428 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:29:44.002 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:30:34.540 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:31:25.018 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:41:26.280 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:41:26.443 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:41:26.670 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:41:26.714 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:41:26.722 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:41:26.784 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:41:26.785 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:41:26.836 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:42:17.343 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:43:07.844 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:43:58.333 [main] Database - com.mysql.cj.jdbc.exceptions.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2023-12-09 22:56:56.586 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:56:56.794 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:56:56.963 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:56:57.034 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:56:57.040 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:56:57.106 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 22:56:57.107 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 22:56:57.147 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:56:57.180 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 22:56:57.225 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.149 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.292 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.548 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.593 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:00:18.602 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:00:18.650 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:00:18.651 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:00:18.689 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.731 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:18.759 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:52.688 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:52.896 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:53.088 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:53.148 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:00:53.154 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:00:53.210 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:00:53.211 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:00:53.257 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:53.291 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:00:53.323 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:20.573 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:20.785 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:20.978 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:21.039 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:03:21.053 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:03:21.115 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:03:21.115 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:03:21.163 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:21.203 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:03:21.239 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.303 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.502 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.697 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.755 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:09:17.761 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:09:17.821 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:09:17.821 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:09:17.865 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.892 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:09:17.933 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.158 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.315 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.548 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.591 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:11:06.597 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:11:06.662 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:11:06.663 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:11:06.711 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.758 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:06.798 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:50.493 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:50.643 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:50.848 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:50.893 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:11:50.911 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:11:50.980 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:11:50.981 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:11:51.026 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:51.060 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:11:51.096 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.069 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.230 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.449 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.496 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:13:51.515 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:13:51.588 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:13:51.588 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:13:51.640 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.695 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:13:51.738 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.116 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.251 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.482 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.527 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:42:22.533 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:42:22.608 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:42:22.609 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:42:22.662 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.709 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:42:22.737 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:58.952 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:59.208 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:59.410 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:59.477 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:45:59.484 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:45:59.541 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[DEBUG] 2023-12-09 23:45:59.542 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:45:59.581 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:59.618 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:45:59.661 [main] Database - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/*INSERT INTO item_note VALUES
+    ("Kind of itchy.", 1), ("So comfy", 3), ("Wa' at line 1
+[ERROR] 2023-12-09 23:48:46.422 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:48:46.620 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:48:46.842 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:48:46.903 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 23:48:46.909 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:48:46.971 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 23:48:46.971 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:48:47.019 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:48:47.070 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:48:47.113 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:30.324 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:30.557 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:30.754 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:30.815 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 23:49:30.830 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:49:30.885 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-09 23:49:30.886 [main] ItemDao - Searching for item with itemCategory = Pants
+[ERROR] 2023-12-09 23:49:30.925 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:30.967 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:31.005 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:49:43.016 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:50:06.178 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:54:21.539 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:56:10.389 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:56:35.346 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:58:04.486 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:59:41.579 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-09 23:59:49.686 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-10 00:00:59.303 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-10 00:00:59.452 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[ERROR] 2023-12-10 00:00:59.630 [main] Database - java.sql.SQLException: Column count doesn't match value count at row 1
+[DEBUG] 2023-12-10 00:20:33.248 [main] ItemNoteDao - Searching for item note with noteText = Wear these a lot
+[DEBUG] 2023-12-10 00:21:28.341 [main] ItemNoteDao - Searching for item note with noteText = w

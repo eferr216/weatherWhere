@@ -3,6 +3,8 @@ package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A class to represent a clothing item
@@ -24,6 +26,12 @@ public class Item {
     @GenericGenerator(name = "native", strategy = "native")
     @Column(name = "item_id")
     private int id;
+
+    //@OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    //private Set<Item> items = new HashSet<>();
+
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<ItemNote> itemNotes = new HashSet<>();
 
     /**
      * Instantiates a new Item.
@@ -84,7 +92,7 @@ public class Item {
 
     /**
      * The setter method for the itemDescription instance variable.
-     * @param itemDescription
+     * @param itemDescription the item description
      */
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
@@ -100,7 +108,7 @@ public class Item {
 
     /**
      * The setter method for the itemCategory instance variable.
-     * @param itemCategory
+     * @param itemCategory the item category
      */
     public void setItemCategory(String itemCategory) {
         this.itemCategory = itemCategory;
@@ -113,5 +121,65 @@ public class Item {
     public String getItemCategory() {
         return itemCategory;
     }
+
+    /**
+     * This method gets the items
+     * @return the items
+     */
+    /*public Set<Item> getItems() {
+        return items;
+    }*/
+
+    /**
+     * This method sets the items
+     * @param items items Set
+     */
+    /*public void setItems(Set<Item> items) {
+        this.items = items;
+    }*/
+
+    /**
+     * Gets the item notes.
+     * @return item notes
+     */
+    public Set<ItemNote> getItemNotes() {
+        return itemNotes;
+    }
+
+    /**
+     * Sets the item notes.
+     * @param itemNotes item notes
+     */
+    public void setItemNotes(Set<ItemNote> itemNotes) {
+        this.itemNotes = itemNotes;
+    }
+
+    /**
+     * Adds an item note to the itemNotes Set
+     * @param itemNote
+     */
+    public void addItemNote(ItemNote itemNote) {
+        itemNotes.add(itemNote);
+        itemNote.setItem(this);
+    }
+
+    /**
+     * Remove item note
+     * @param itemNote an item note
+     */
+    public void removeItemNote(ItemNote itemNote) {
+        itemNotes.remove(itemNote);
+        itemNote.setItem(null);
+    }
+
+    @Override
+    public String toString() {
+        return "Item{"+
+                "itemName='" + itemName + '\'' +
+                ", itemDescription'" + itemDescription + '\'' +
+                ", itemCategory='" + itemCategory + '\'' + '}';
+    }
+
+
 
 }
