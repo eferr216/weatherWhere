@@ -17,6 +17,18 @@
 - [ ] Build test DB for Project website
 - [ ] Write test cases for CRUD operations
 
+### Week 5
+#### This week's focus is the database tables and test methods for the Weather Where project.
+### Set up one-to-many relationship for Project and create generic dao to handle any object type.
+- [ ] Create the ItemNote DB table.
+- [ ] Create test methods for CRUD operations on ItemNote table objects
+- [ ] Create Generic DAO for testing general DAO methods.
+
+### Week 5
+####
+###
+
+
 
 
 
