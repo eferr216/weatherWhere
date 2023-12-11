@@ -5,14 +5,14 @@
 <link rel="stylesheet" href="css/styles.css">
 <body>
 <jsp:include page="navigation.jsp" />
-<h1>Delete Confirmation</h1>
+<h1>Edit Page</h1>
 <main>
     <div class="mainContent">
 
         <div>
-            <h2 style="margin-top: 50px; margin-bottom: 20px;">Are you sure you want to delete this item?:</h2>
-            <form action="searchItem?delete_id=${item.id}" method="post">
-                <label for="delete">Delete:</label>
+            <h2 style="margin-top: 50px; margin-bottom: 20px;">Edit:</h2>
+            <form action="searchItem?edit_id=${item.id}" method="post">
+                <label for="delete">Edit:</label>
                 <input type="submit" name="submitButton" id="delete" value="Delete">
                 <label for="cancel">Cancel:</label>
                 <input type="submit" name="submitButton" id="cancel" value="Cancel">

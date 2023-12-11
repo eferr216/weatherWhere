@@ -32,12 +32,14 @@ public class SearchItems extends HttpServlet {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
-        else if (req.getParameter("submit").equals("Search")) {
-            req.setAttribute("items", itemDao.getItemsByCategory(req.getParameter("/results.jsp")));
+        else if (req.getParameter("delete") != null) {
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/deleteItem.jsp");
+            dispatcher.forward(req, res);
         }
-        /*else if (req.getParameter("submit").equals("Submit")) {
-            req.setAttribute("items", itemDao.insert(req.getParameter("itemCategory")));
-        }*/
+        else if (req.getParameter("edit") != null) {
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/editItem.jsp");
+            dispatcher.forward(req, res);
+        }
         else {
             req.setAttribute("items", itemDao.getAllItems());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
@@ -51,17 +53,12 @@ public class SearchItems extends HttpServlet {
 
         ItemDao itemDao = new ItemDao();
 
-        String param = req.getParameter("delete_id");
-        req.setAttribute("paramAttribute", param);
-
-        if (!req.getParameter("delete_id").isEmpty()) {
+        if (req.getParameter("delete") != null) {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/deleteItem.jsp");
             dispatcher.forward(req, res);
         }
-        else if ("Delete".equals(req.getParameter("submitButton"))) {
-            itemDao.delete(itemDao.getById(Integer.parseInt(param)));
-            req.setAttribute("items", itemDao.getAllItems());
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
+        else if (req.getParameter("edit") != null) {
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/editItem.jsp");
             dispatcher.forward(req, res);
         }
         else {
