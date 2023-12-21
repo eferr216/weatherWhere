@@ -1,21 +1,33 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<head>
+    <title>Weather Where</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
 <jsp:include page="navigation.jsp" />
-<h1>Edit Page</h1>
+<h1>Edit Item</h1>
 <main>
     <div class="mainContent">
 
         <div>
-            <h2 style="margin-top: 50px; margin-bottom: 20px;">Edit:</h2>
-            <form action="searchItem?edit_id=${item.id}" method="post">
-                <label for="delete">Edit:</label>
-                <input type="submit" name="submitButton" id="delete" value="Delete">
-                <label for="cancel">Cancel:</label>
-                <input type="submit" name="submitButton" id="cancel" value="Cancel">
+            <form action="searchItem?id_to_edit=${idToEdit}" method="post" style="margin-top: 50px; margin-bottom: 20px;">
+                <label for="itemName">Item Name:</label>
+                <input type="text" name="itemName" id="itemName" value="${itemToEdit.itemName}">
+                <label for="itemDescription">Item Description:</label>
+                <input type="text" name="itemDescription" id="itemDescription" value="${itemToEdit.itemDescription}">
+                <label for="itemCategory">Item Category:</label>
+                <input type="text" name="itemCategory" id="itemCategory" value="${itemToEdit.itemCategory}">
+                <c:forEach items="${itemToEdit.itemNotes}" var="itemNote">
+                    <h2>Notes:</h2>
+                    <p>${itemNote.noteText}</p>
+                </c:forEach>
+                <div class="submissionButtonsDiv">
+                    <input type="submit" name="confirmEditButton" id="editItem" value="Submit">
+                    <input type="submit" name="cancelEditButton" id="cancelEditItem" value="Cancel">
+                </div>
             </form>
         </div>
 

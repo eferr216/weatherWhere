@@ -67,7 +67,7 @@ public class ItemDao {
 
     /**
      * Update an item.
-     * @param item
+     * @param item the item
      */
     public void saveOrUpdate(Item item) {
         Session session = sessionFactory.openSession();
@@ -80,7 +80,7 @@ public class ItemDao {
     /**
      * This method inserts a new Item into the database.
      *
-     * @param item
+     * @param item the item
      * @return the id of the inserted item
      */
     public int insert(Item item) {

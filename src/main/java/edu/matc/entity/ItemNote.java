@@ -20,6 +20,7 @@ public class ItemNote {
 
     @Column(name = "note_text")
     private String noteText;
+
     @ManyToOne
     @JoinColumn(name="item_id", foreignKey = @ForeignKey(name = "ITEM_ID_FK"))
     private Item item;
