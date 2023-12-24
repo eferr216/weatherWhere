@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<jsp:include page="navigation.jsp" />
+<nav>
+    <ul>
+        <li><a href="index.jsp">Check Weather</a></li>
+        <li><a href="searchItem?link=clothing">Clothes</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+    </ul>
+</nav>
 <h1>Notes</h1>
 <main>
     <div class="mainContent">
         <div class="row">
             <c:forEach items="${itemNotes}" var="itemNote">
                 <div class="clothingDivs col-6-xs col-4-sm col-4-md">
-                    <form action="searchItem?item_note_id=${itemNote.id}" method="post">
+                    <form action="searchItem?selected_item_id=${selectedItem.id}&item_note_id=${itemNote.id}" method="post">
                         <div class="itemAttributesDiv">
                             <p><span class="clothingAttributeNameStyles">Note Text: </span>${itemNote.noteText}</p>
                             <input type="submit" name="deleteItemNote" value="Delete" class="deleteSubmitButton">

@@ -13,7 +13,7 @@
     <div class="mainContent">
 
         <div>
-            <form action="searchItem?note_id_to_edit=${idToEdit}" method="post" style="margin-top: 50px; margin-bottom: 20px;">
+            <form action="searchItem?selected_item_id=${selectedItem.id}&note_id_to_edit=${idToEdit}" method="post" style="margin-top: 50px; margin-bottom: 20px;">
                 <label for="noteText">Note Text:</label>
                 <input type="text" name="noteText" id="noteText" value="${itemNoteToEdit.noteText}">
                 <div class="submissionButtonsDiv">

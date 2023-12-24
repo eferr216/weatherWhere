@@ -164,6 +164,10 @@ public class Item {
         itemNote.setItem(this);
     }
 
+    public void setItemNote(ItemNote itemNote) {
+        itemNote.setItem(this);
+    }
+
     /**
      * Remove item note
      * @param itemNote an item note

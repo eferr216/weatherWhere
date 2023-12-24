@@ -42,9 +42,10 @@ public class SearchItems extends HttpServlet {
             int itemId = Integer.parseInt(req.getParameter("item_id"));
 
             Item selectedItem = itemDao.getById(itemId);
-            req.setAttribute("selectedItem", selectedItem);
 
             Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
+
+            req.setAttribute("selectedItem", selectedItem);
             req.setAttribute("itemNotes", itemNotesList);
 
 
@@ -133,32 +134,50 @@ public class SearchItems extends HttpServlet {
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("insertNoteSubmitButton") != null) {
+            int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
+            Item selectedItem = itemDao.getById(selectedItemId);
 
             String noteText = req.getParameter("noteText");
 
-            int itemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item item = itemDao.getById(itemId);
-            ItemNote newItemNote = new ItemNote(noteText, item);
-            item.addItemNote(newItemNote);
+            ItemNote newItemNote = new ItemNote(noteText, selectedItem);
+            selectedItem.addItemNote(newItemNote);
 
             itemNoteDao.insert(newItemNote);
 
-            req.setAttribute("itemNotes", itemNoteDao.getAllItemNotes());
+            Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
+
+            req.setAttribute("selectedItem", selectedItem);
+            req.setAttribute("itemNotes", itemNotesList);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/itemNotes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("deleteItemNote") != null) {
+            int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
+            Item selectedItem = itemDao.getById(selectedItemId);
+
             int idToDelete = Integer.parseInt(req.getParameter("item_note_id"));
+
+            selectedItem.removeItemNote(itemNoteDao.getById(idToDelete));
+
             itemNoteDao.delete(itemNoteDao.getById(idToDelete));
 
-            req.setAttribute("itemNotes", itemNoteDao.getAllItemNotes());
+            Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
+
+            req.setAttribute("selectedItem", selectedItem);
+            req.setAttribute("itemNotes", itemNotesList);
+
             RequestDispatcher dispatcher = req.getRequestDispatcher("/itemNotes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("editItemNote") != null) {
+            int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
+            Item selectedItem = itemDao.getById(selectedItemId);
 
             int idToEdit = Integer.parseInt(req.getParameter("item_note_id"));
+
+            req.setAttribute("selectedItem", selectedItem);
             req.setAttribute("idToEdit", idToEdit);
+
             ItemNote itemNoteToEdit = itemNoteDao.getById(idToEdit);
             req.setAttribute("itemNoteToEdit", itemNoteToEdit);
 
@@ -166,7 +185,11 @@ public class SearchItems extends HttpServlet {
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("confirmEditNoteButton") != null) {
+            int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
+            Item selectedItem = itemDao.getById(selectedItemId);
+
             int idToEdit = Integer.parseInt(req.getParameter("note_id_to_edit"));
+
             String noteText = req.getParameter("noteText");
 
             ItemNote itemNoteToUpdate = itemNoteDao.getById(idToEdit);
@@ -175,12 +198,23 @@ public class SearchItems extends HttpServlet {
 
             itemNoteDao.saveOrUpdate(itemNoteToUpdate);
 
-            req.setAttribute("itemNotes", itemNoteDao.getAllItemNotes());
+            selectedItem.setItemNote(itemNoteToUpdate);
+
+            Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
+
+            req.setAttribute("selectedItem", selectedItem);
+            req.setAttribute("itemNotes", itemNotesList);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/itemNotes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("cancelEditNoteButton") != null) {
-            req.setAttribute("itemNotes", itemNoteDao.getAllItemNotes());
+            int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
+            Item selectedItem = itemDao.getById(selectedItemId);
+
+            Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
+
+            req.setAttribute("selectedItem", selectedItem);
+            req.setAttribute("itemNotes", itemNotesList);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/itemNotes.jsp");
             dispatcher.forward(req, res);
         }
