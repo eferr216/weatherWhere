@@ -11,3 +11,10 @@ Week 5
 Created a one-to-many relationship for the Weather Where application. Created a test database for both tables that are used in the application. Created test methods for all methods in both the ItemDao and the ItemNoteDao. Also created a generic dao to replace the ItemNoteDao and eventually the ItemDao. 
 
 Resources:
+
+Week 6
+11/16/2023
+
+Finished adding all of the CRUD operations for both tables in the database. Used Elastic Beanstalk and RDS to host Weather Where application on AWS.
+
+Resources:

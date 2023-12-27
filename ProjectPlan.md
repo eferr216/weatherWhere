@@ -25,8 +25,10 @@
 - [ ] Create Generic DAO for testing general DAO methods.
 
 ### Week 5
-####
-###
+#### This week's focus is to finish up the CRUD features in relation to the UI.
+### Use Elastic Beanstalk and RDS to host Weather Where project on AWS.
+- [ ] Add CRUD operations to UI for both Items and ItemNotes.
+- [ ] Use Elastic Beanstalk and RDS to host Weather Where application on AWS.
 
 
 
