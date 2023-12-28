@@ -20,10 +20,6 @@
                 <input type="text" name="itemDescription" id="itemDescription" value="${itemToEdit.itemDescription}">
                 <label for="itemCategory">Item Category:</label>
                 <input type="text" name="itemCategory" id="itemCategory" value="${itemToEdit.itemCategory}">
-                <c:forEach items="${itemToEdit.itemNotes}" var="itemNote">
-                    <h2>Notes:</h2>
-                    <p>${itemNote.noteText}</p>
-                </c:forEach>
                 <div class="submissionButtonsDiv">
                     <input type="submit" name="confirmEditButton" id="editItem" value="Submit">
                     <input type="submit" name="cancelEditButton" id="cancelEditItem" value="Cancel">

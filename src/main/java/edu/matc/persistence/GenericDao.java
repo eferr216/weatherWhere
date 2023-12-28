@@ -22,7 +22,7 @@ public class GenericDao<T> {
 
     /**
      * Instantiates a new Generic DAO
-     * @param type the entity type, for example, Item
+     * @param type the entity type, for example, Item, ItemNote
      */
     public GenericDao(Class<T> type) {
         this.type = type;
@@ -58,28 +58,28 @@ public class GenericDao<T> {
     }
 
     /**
-     * Update an item note.
-     * @param itemNote an item note
+     * Update an entity.
+     * @param entity an entity
      */
-    public void saveOrUpdate(ItemNote itemNote) {
+    public void saveOrUpdate(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
-        session.saveOrUpdate(itemNote);
+        session.saveOrUpdate(entity);
         transaction.commit();
         session.close();
     }
 
     /**
-     * This method inserts a new Item Note into the database.
+     * This method inserts a new entity into the database.
      *
-     * @param itemNote an item note
-     * @return the id of the inserted item
+     * @param entity an entity
+     * @return the id of the inserted entity
      */
-    public int insert(ItemNote itemNote) {
+    public int insert(T entity) {
         int id = 0;
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
-        id = (int)session.save(itemNote);
+        id = (int)session.save(entity);
         transaction.commit();
         session.close();
         return id;

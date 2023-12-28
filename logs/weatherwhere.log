@@ -503,3 +503,5 @@
 [DEBUG] 2023-12-10 22:13:06.080 [main] GenericDao - Searching for item note with noteText = w
 [DEBUG] 2023-12-20 19:22:08.208 [http-nio-8080-exec-7] SearchItems - 3
 [DEBUG] 2023-12-20 23:37:59.435 [http-nio-8080-exec-8] SearchItems - These are cool
+[DEBUG] 2023-12-27 18:42:40.407 [main] GenericDao - Searching for item note with noteText = Wear these a lot
+[DEBUG] 2023-12-27 18:42:40.473 [main] GenericDao - Searching for item note with noteText = w

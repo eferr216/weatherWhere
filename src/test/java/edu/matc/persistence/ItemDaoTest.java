@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ItemDaoTest {
 
     ItemDao itemDao;
+    GenericDao genericDao;
 
     /**
      * Setup.
@@ -24,6 +25,7 @@ class ItemDaoTest {
     void setUp() {
 
         itemDao = new ItemDao();
+        genericDao = new GenericDao(Item.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -35,7 +37,7 @@ class ItemDaoTest {
      */
     @Test
     void getAllItemsSuccess() {
-        List<Item> items = itemDao.getAllItems();
+        List<Item> items = genericDao.getAll();
         assertEquals(5, items.size());
     }
 
@@ -77,10 +79,10 @@ class ItemDaoTest {
     @Test
     void insertSuccess() {
 
-        Item newItem = new Item(18,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
-        int id = itemDao.insert(newItem);
-        assertEquals(18, id);
-        Item insertedItem = itemDao.getById(id);
+        Item newItem = new Item(45,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
+        int id = genericDao.insert(newItem);
+        assertEquals(45, id);
+        Item insertedItem = (Item) genericDao.getById(id);
         assertEquals("Yellow boots", insertedItem.getItemName());
     }
 
@@ -106,8 +108,8 @@ class ItemDaoTest {
      */
     @Test
     void deleteSuccess() {
-        itemDao.delete(itemDao.getById(5));
-        assertNull(itemDao.getById(5));
+        genericDao.delete(itemDao.getById(5));
+        assertNull(genericDao.getById(5));
     }
 
     /**
