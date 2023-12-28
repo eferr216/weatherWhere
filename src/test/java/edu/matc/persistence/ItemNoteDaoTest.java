@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ItemNoteDaoTest {
-    //ItemNoteDao itemNoteDao;
     GenericDao genericDao;
 
     /**
@@ -25,13 +24,10 @@ public class ItemNoteDaoTest {
      */
     @BeforeEach
     void setUp() {
-
-        //itemNoteDao = new ItemNoteDao();
         genericDao = new GenericDao(ItemNote.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-
     }
 
     /**

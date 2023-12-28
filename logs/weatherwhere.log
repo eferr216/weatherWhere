@@ -505,3 +505,15 @@
 [DEBUG] 2023-12-20 23:37:59.435 [http-nio-8080-exec-8] SearchItems - These are cool
 [DEBUG] 2023-12-27 18:42:40.407 [main] GenericDao - Searching for item note with noteText = Wear these a lot
 [DEBUG] 2023-12-27 18:42:40.473 [main] GenericDao - Searching for item note with noteText = w
+[DEBUG] 2023-12-27 21:50:39.929 [main] GenericDao - Searching for item note with noteText = Wear these a lot
+[DEBUG] 2023-12-27 21:53:04.794 [main] GenericDao - Searching for item note with noteText = w
+[DEBUG] 2023-12-27 21:58:18.611 [main] GenericDao - Searching for entity with itemCategory = Pants
+[DEBUG] 2023-12-27 21:58:30.524 [main] GenericDao - Searching for item note with itemCategory = Pants
+[DEBUG] 2023-12-27 22:04:06.046 [main] GenericDao - Searching for entity with itemCategory = Pants
+[DEBUG] 2023-12-27 22:04:06.109 [main] GenericDao - Searching for item note with itemCategory = Pants
+[DEBUG] 2023-12-27 22:04:58.949 [main] GenericDao - Searching for entity with itemCategory = Pants
+[DEBUG] 2023-12-27 22:04:59.014 [main] GenericDao - Searching for item note with itemCategory = Pants
+[DEBUG] 2023-12-27 22:05:28.195 [main] GenericDao - Searching for entity with itemCategory = Pants
+[DEBUG] 2023-12-27 22:05:28.262 [main] GenericDao - Searching for item note with itemCategory = Pants
+[DEBUG] 2023-12-27 22:05:59.271 [main] GenericDao - Searching for entity with itemCategory = Pants
+[DEBUG] 2023-12-27 22:05:59.335 [main] GenericDao - Searching for item note with itemCategory = Pants

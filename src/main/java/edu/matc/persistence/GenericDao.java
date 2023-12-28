@@ -1,5 +1,6 @@
 package edu.matc.persistence;
 
+import edu.matc.entity.Item;
 import edu.matc.entity.ItemNote;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -98,43 +99,59 @@ public class GenericDao<T> {
     }
 
     /**
-     * Get item note by property (exact match)
-     * sample usage: getByPropertyEqual("itemNoteCategory", "Pants")
+     * This method gets an item by itemCategory.
+     * @return an item
      */
-    public List<ItemNote> getByPropertyEqual(String propertyName, String value) {
+    public List<T> getItemsByCategory(String itemCategory) {
         Session session = getSession();
-
-        logger.debug("Searching for item note with " + propertyName + " = " + value);
-
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<ItemNote> query = builder.createQuery( ItemNote.class );
-        Root<ItemNote> root = query.from( ItemNote.class );
-        query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<ItemNote> itemNotes = session.createQuery( query ).getResultList();
-
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        Expression<String> propertyPath = root.get("itemCategory");
+        query.where(builder.like(propertyPath, "%" + itemCategory + "%"));
+        List<T> list = session.createQuery(query).getResultList();
         session.close();
-        return itemNotes;
+        return list;
     }
 
     /**
-     * Get item note by property (like)
+     * Get entity by property (exact match)
+     * sample usage: getByPropertyEqual("itemNoteCategory", "Pants")
+     */
+    public List<T> getByPropertyEqual(String propertyName, String value) {
+        Session session = getSession();
+
+        logger.debug("Searching for entity with " + propertyName + " = " + value);
+
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery( type );
+        Root<T> root = query.from( type );
+        query.select(root).where(builder.equal(root.get(propertyName), value));
+        List<T> list = session.createQuery( query ).getResultList();
+
+        session.close();
+        return list;
+    }
+
+    /**
+     * Get entity by property (like)
      * sample usage: getPropertyLike("itemNoteName", "Grey sweater")
      */
-    public List<ItemNote> getByPropertyLike(String propertyName, String value) {
+    public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
 
         logger.debug("Searching for item note with {} = {}", propertyName, value);
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<ItemNote> query = builder.createQuery( ItemNote.class );
-        Root<ItemNote> root = query.from( ItemNote.class );
+        CriteriaQuery<T> query = builder.createQuery( type );
+        Root<T> root = query.from( type );
         Expression<String> propertyPath = root.get(propertyName);
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
 
-        List<ItemNote> itemNotes = session.createQuery( query ).getResultList();
+        List<T> list = session.createQuery( query ).getResultList();
         session.close();
-        return itemNotes;
+        return list;
     }
 
     /**

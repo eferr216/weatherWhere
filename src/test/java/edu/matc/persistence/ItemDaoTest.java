@@ -14,8 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
  * The type Item dao test.
  */
 class ItemDaoTest {
-
-    ItemDao itemDao;
     GenericDao genericDao;
 
     /**
@@ -23,13 +21,10 @@ class ItemDaoTest {
      */
     @BeforeEach
     void setUp() {
-
-        itemDao = new ItemDao();
         genericDao = new GenericDao(Item.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-
     }
 
     /**
@@ -46,7 +41,7 @@ class ItemDaoTest {
      */
     @Test
     void getItemsByCategorySuccess() {
-        List<Item> items = itemDao.getItemsByCategory("G");
+        List<Item> items = genericDao.getItemsByCategory("G");
         assertEquals(2, items.size());
     }
 
@@ -55,7 +50,7 @@ class ItemDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        Item retrievedItem = itemDao.getById(5);
+        Item retrievedItem = (Item) genericDao.getById(5);
         assertNotNull(retrievedItem);
         assertEquals("Snowpants", retrievedItem.getItemName());
     }
@@ -66,10 +61,10 @@ class ItemDaoTest {
     @Test
     void saveOrUpdateSuccess() {
        String newItemName = "Default Item Name";
-       Item itemToUpdate = itemDao.getById(3);
+       Item itemToUpdate = (Item) genericDao.getById(3);
        itemToUpdate.setItemName(newItemName);
-       itemDao.saveOrUpdate(itemToUpdate);
-       Item retrievedItem = itemDao.getById(3);
+        genericDao.saveOrUpdate(itemToUpdate);
+       Item retrievedItem = (Item) genericDao.getById(3);
        assertEquals(newItemName, retrievedItem.getItemName());
     }
 
@@ -79,15 +74,15 @@ class ItemDaoTest {
     @Test
     void insertSuccess() {
 
-        Item newItem = new Item(45,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
+        Item newItem = new Item(56,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
         int id = genericDao.insert(newItem);
-        assertEquals(45, id);
+        assertEquals(56, id);
         Item insertedItem = (Item) genericDao.getById(id);
         assertEquals("Yellow boots", insertedItem.getItemName());
     }
 
-    //@Test
-    /*void insertWithItemNoteSuccess() {
+    @Test
+    void insertWithItemNoteSuccess() {
 
         Item newItem = new Item(6, "Wool scarf", "A red wool scarf made in Alaska.", "Headwear");
 
@@ -96,19 +91,19 @@ class ItemDaoTest {
 
         newItem.addItemNote(itemNote);
 
-        int id = itemDao.insert(newItem);
+        int id = genericDao.insert(newItem);
         assertNotEquals(0,id);
-        Item insertedItem = itemDao.getById(id);
+        Item insertedItem = (Item) genericDao.getById(id);
         assertEquals("Wool scarf", insertedItem.getItemName());
 
-    }*/
+    }
 
     /**
      * Tests the delete method.
      */
     @Test
     void deleteSuccess() {
-        genericDao.delete(itemDao.getById(5));
+        genericDao.delete(genericDao.getById(5));
         assertNull(genericDao.getById(5));
     }
 
@@ -117,7 +112,7 @@ class ItemDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<Item> items = itemDao.getByPropertyEqual("itemCategory", "Pants");
+        List<Item> items = genericDao.getByPropertyEqual("itemCategory", "Pants");
         assertEquals(1, items.size());
         assertEquals(5, items.get(0).getId());
     }
@@ -127,7 +122,7 @@ class ItemDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Item> items = itemDao.getByPropertyLike("itemCategory", "Pants");
+        List<Item> items = genericDao.getByPropertyLike("itemCategory", "Pants");
         assertEquals(1, items.size());
     }
 }
