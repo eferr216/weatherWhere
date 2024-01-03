@@ -19,3 +19,9 @@ Added a one-to-many relationship in my project. Added testing for the Daos' meth
 -20 hours
 
 Used Elastic Beanstalk and RDS to host my project on AWS. Struggled a lot with getting my JDBC connection to work when hosting the application through AWS services. Learned about RDS and using it to communicate with databases.
+
+### Week 7 work
+
+- 13 hours
+
+Created and configured user pool for my indie project. Deployed my indie project as a Cognito app. I struggled with generating the needed certificate quite a bit. Seeing as I am working off of a Windows machine, I was not able to use the 'openssl version' because it wasn't installed on my machine. This led me down quite a rabbit hole. I figured I had the option of either using a package manager to install OpenSSL, or the alternate which involved connecting to an EC2 instance in a running environment by using the EB CLI's eb ssh command. This meant I needed to install the EB CLI. I strugged with this a bit. Installing the EB CLI meant that I also needed to install Python as the installation requires using some python commands. I then needed to install virtualenv as virtualenv is a requirement for installing the EB CLI also. This was in addition to having to add virtualenv and pip to the Path variable. So once this was complete I was then able to install the EB CLI. My new issue was that I still couldn't seem to get the eb command to work. Leading me to believe that something might've been wrong with my installation. EB CLI was installed, as was Python and virtualenv. Anyway it was at this point after hours of struggling that I finally realized the certificate and its associated files were posted for us Windows users! Awesome!!

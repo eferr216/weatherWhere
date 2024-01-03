@@ -13,8 +13,13 @@ Created a one-to-many relationship for the Weather Where application. Created a 
 Resources:
 
 Week 6
-11/16/2023
+11/22/2023
 
 Finished adding all of the CRUD operations for both tables in the database. Used Elastic Beanstalk and RDS to host Weather Where application on AWS.
 
 Resources:
+
+Week 7
+11/28/2023
+
+Enabled cognito functionality in my indie project (Weather Where). Implemented user logins.

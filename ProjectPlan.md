@@ -24,11 +24,17 @@
 - [ ] Create test methods for CRUD operations on ItemNote table objects
 - [ ] Create Generic DAO for testing general DAO methods.
 
-### Week 5
+### Week 6
 #### This week's focus is to finish up the CRUD features in relation to the UI.
 ### Use Elastic Beanstalk and RDS to host Weather Where project on AWS.
 - [ ] Add CRUD operations to UI for both Items and ItemNotes.
 - [ ] Use Elastic Beanstalk and RDS to host Weather Where application on AWS.
+
+### Week 7
+#### This week's focus is to implement cognito functionality into my indie project.
+- [ ] Create and configure user pool so that user logins can be implemented.
+- [ ] Create a certificate so that indie project can be deployed as a Cognito app on Elastic Beanstalk.
+    
 
 
 
