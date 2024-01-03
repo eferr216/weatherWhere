@@ -7,15 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="index.jsp">Check Weather</a></li>
-        <li><a href="searchItem?link=clothing">Clothes</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">Sign Up</a></li>
-    </ul>
-</nav>
-<h1>Notes</h1>
+<jsp:include page="navigation.jsp" />
 <main>
     <div class="mainContent">
         <div class="row">
