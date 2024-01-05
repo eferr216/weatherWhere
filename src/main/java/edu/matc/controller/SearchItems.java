@@ -14,8 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Set;
+
+import javax.ws.rs.client.*;
+import javax.ws.rs.core.MediaType;
 
 /**
  * A simple servlet to welecome the user
@@ -33,7 +35,25 @@ public class SearchItems extends HttpServlet {
 
         String clickedLink = req.getParameter("link");
 
-        if (clickedLink.equals("clothing")) {
+        if (req.getParameter("searchZipCode") != null) {
+            int userZipCode = Integer.parseInt(req.getParameter("zipCode"));
+            String x = "";
+            String y = "";
+
+            String bingMapsApiUrl = "http://dev.virtualearth.net/REST/v1/Locations?postalCode=" + userZipCode +"&key=Alanux9ey6vFw_0du1NniRGmnjb6UUF7bZxGP-_XKGRxuBCq98ucjVISngc5s7oL";
+
+            Client client = ClientBuilder.newClient();
+            WebTarget target = client.target(bingMapsApiUrl);
+            String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
+            req.setAttribute("apiResponse", response);
+
+            //
+
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+            dispatcher.forward(req, res);
+        }
+        else if (clickedLink.equals("clothing")) {
             req.setAttribute("items", itemDao.getAllItems());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);

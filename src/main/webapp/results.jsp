@@ -12,6 +12,7 @@
 <main>
     <div class="mainContent">
         <h2>This is the Results.jsp page</h2>
+        ${apiResponse}
     </div>
 </main>
 </body>

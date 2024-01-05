@@ -14,7 +14,7 @@
     <p style="text-align: center; margin-bottom: 5px;">Enter your zip code:</p>
     <form action="searchItem" method="get">
         <input name="zipCode" type="text">
-        <input type="submit" value="Search">
+        <input type="submit" name="searchZipCode" value="Search">
     </form>
 </div>
 </main>
