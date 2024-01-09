@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h1>Weather Where</h1>
 <jsp:include page="navigation.jsp" />
 <main>
     <div class="mainContent">
-        <h2>This is the Results.jsp page</h2>
-        ${apiResponse}
+        <h1>Weather Results</h1>
+        <div id="zipCodeWeatherResultsDiv">
+            <h2>${city}</h2>
+            <br>
+            <p><span class="weatherResultsPropertyLabel">Temperature:</span> ${temperature}</p>
+            <p><span class="weatherResultsPropertyLabel">Wind Speed:</span> ${windSpeed}</p>
+        </div>
+        <br>
+        ${mainObject}
+        <br>
     </div>
 </main>
 </body>

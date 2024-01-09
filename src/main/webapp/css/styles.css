@@ -120,6 +120,17 @@ input[type="submit"]:active {
     display: block;
 }
 
+.weatherResultsPropertyLabel {
+    font-weight: bold;
+}
+
+#zipCodeWeatherResultsDiv {
+    max-width: 80%;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .row {
     margin-left: 0;
     margin-right: 0;

@@ -1,11 +1,15 @@
 package edu.matc.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.entity.Item;
 import edu.matc.entity.ItemNote;
+import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.ItemDao;
 import edu.matc.persistence.ItemNoteDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,14 +35,15 @@ public class SearchItems extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        ItemDao itemDao = new ItemDao();
+        //ItemDao itemDao = new ItemDao();
+        GenericDao itemGenericDao = new GenericDao(Item.class);
 
         String clickedLink = req.getParameter("link");
 
         if (req.getParameter("searchZipCode") != null) {
             int userZipCode = Integer.parseInt(req.getParameter("zipCode"));
-            String x = "";
-            String y = "";
+            Double x;
+            Double y;
 
             String bingMapsApiUrl = "http://dev.virtualearth.net/REST/v1/Locations?postalCode=" + userZipCode +"&key=Alanux9ey6vFw_0du1NniRGmnjb6UUF7bZxGP-_XKGRxuBCq98ucjVISngc5s7oL";
 
@@ -46,22 +51,61 @@ public class SearchItems extends HttpServlet {
             WebTarget target = client.target(bingMapsApiUrl);
             String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
-            req.setAttribute("apiResponse", response);
+            // Traverse the main JSON response to extract the GPS coordinates of the user's zip code
+            JSONObject mainJsonObject = new JSONObject(response);
+            JSONArray resourceSetsArray = mainJsonObject.getJSONArray("resourceSets");
+            JSONObject resourceSetsArrayFirstObject = resourceSetsArray.getJSONObject(0);
+            JSONArray resourcesArray = resourceSetsArrayFirstObject.getJSONArray("resources");
+            JSONObject resourcesArrayFirstObject = resourcesArray.getJSONObject(0);
+            JSONArray geocodePointsArray = resourcesArrayFirstObject.getJSONArray("geocodePoints");
+            JSONObject geocodePointsArrayFirstObject = geocodePointsArray.getJSONObject(0);
+            JSONArray coordinatesArray = geocodePointsArrayFirstObject.getJSONArray("coordinates");
 
-            //
+            // Get coordinates
+            x = (Double) coordinatesArray.get(0);
+            y = (Double) coordinatesArray.get(1);
+
+            String openWeatherMapKey = "99cb12ee7bf388635c3b8d6538da8e35";
+
+            // Call 2nd API using GPS coordinates
+            String nationalWeatherServiceApiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&appid=" + openWeatherMapKey;
+            target = client.target(nationalWeatherServiceApiUrl);
+            response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
+            JSONObject mainObject = new JSONObject(response);
+
+            JSONObject windObject = mainObject.getJSONObject("wind");
+            double windSpeed = windObject.getInt("speed");
+            windSpeed = windSpeed * 2.2369;
+            String windSpeedString = windSpeed + " MPH";
+
+            JSONObject tempObject = mainObject.getJSONObject("main");
+            int temperature = tempObject.getInt("temp");
+            temperature = (int) Math.round((temperature * 1.8) - 459.67);
+            String temperatureString = temperature + " \u00B0" + "F";
+
+                    //
+
+            String cityName = mainObject.getString("name");
+
+            req.setAttribute("mainObject", mainObject);
+            req.setAttribute("city", cityName);
+            req.setAttribute("temperature", temperatureString);
+            req.setAttribute("windSpeed", windSpeedString);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, res);
         }
         else if (clickedLink.equals("clothing")) {
-            req.setAttribute("items", itemDao.getAllItems());
+            //req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
         else if (clickedLink.equals("viewNotes")) {
             int itemId = Integer.parseInt(req.getParameter("item_id"));
 
-            Item selectedItem = itemDao.getById(itemId);
+            Item selectedItem = (Item) itemGenericDao.getById(itemId);
 
             Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
 
@@ -73,7 +117,7 @@ public class SearchItems extends HttpServlet {
             dispatcher.forward(req, res);
         }
         else {
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, res);
         }
@@ -83,8 +127,10 @@ public class SearchItems extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        ItemDao itemDao = new ItemDao();
-        ItemNoteDao itemNoteDao = new ItemNoteDao();
+        //ItemDao itemDao = new ItemDao();
+        //ItemNoteDao itemNoteDao = new ItemNoteDao();
+        GenericDao itemGenericDao = new GenericDao(Item.class);
+        GenericDao itemNoteGenericDao = new GenericDao(ItemNote.class);
 
         if (req.getParameter("delete") != null) {
             int idToDelete = Integer.parseInt(req.getParameter("id"));
@@ -95,21 +141,21 @@ public class SearchItems extends HttpServlet {
         else if (req.getParameter("edit") != null) {
             int idToEdit = Integer.parseInt(req.getParameter("id"));
             req.setAttribute("idToEdit", idToEdit);
-            Item itemToEdit = itemDao.getById(idToEdit);
+            Item itemToEdit = (Item) itemGenericDao.getById(idToEdit);
             req.setAttribute("itemToEdit", itemToEdit);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/editItem.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("confirmDeleteButton") != null) {
             int idToDelete = Integer.parseInt(req.getParameter("id_to_delete"));
-            itemDao.delete(itemDao.getById(idToDelete));
+            itemGenericDao.delete(itemGenericDao.getById(idToDelete));
 
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("cancelDeleteButton") != null) {
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
@@ -119,20 +165,20 @@ public class SearchItems extends HttpServlet {
             String itemDescription = req.getParameter("itemDescription");
             String itemCategory = req.getParameter("itemCategory");
 
-            Item itemToUpdate = itemDao.getById(idToEdit);
+            Item itemToUpdate = (Item) itemGenericDao.getById(idToEdit);
 
             itemToUpdate.setItemName(itemName);
             itemToUpdate.setItemDescription(itemDescription);
             itemToUpdate.setItemCategory(itemCategory);
 
-            itemDao.saveOrUpdate(itemToUpdate);
+            itemGenericDao.saveOrUpdate(itemToUpdate);
 
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("cancelEditButton") != null) {
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
@@ -147,22 +193,22 @@ public class SearchItems extends HttpServlet {
             newItem.setItemDescription(itemDescription);
             newItem.setItemCategory(itemCategory);
 
-            itemDao.insert(newItem);
+            itemGenericDao.insert(newItem);
 
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
         else if (req.getParameter("insertNoteSubmitButton") != null) {
             int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item selectedItem = itemDao.getById(selectedItemId);
+            Item selectedItem = (Item) itemGenericDao.getById(selectedItemId);
 
             String noteText = req.getParameter("noteText");
 
             ItemNote newItemNote = new ItemNote(noteText, selectedItem);
             selectedItem.addItemNote(newItemNote);
 
-            itemNoteDao.insert(newItemNote);
+            itemNoteGenericDao.insert(newItemNote);
 
             Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
 
@@ -173,13 +219,13 @@ public class SearchItems extends HttpServlet {
         }
         else if (req.getParameter("deleteItemNote") != null) {
             int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item selectedItem = itemDao.getById(selectedItemId);
+            Item selectedItem = (Item) itemGenericDao.getById(selectedItemId);
 
             int idToDelete = Integer.parseInt(req.getParameter("item_note_id"));
 
-            selectedItem.removeItemNote(itemNoteDao.getById(idToDelete));
+            selectedItem.removeItemNote((ItemNote) itemNoteGenericDao.getById(idToDelete));
 
-            itemNoteDao.delete(itemNoteDao.getById(idToDelete));
+            itemNoteGenericDao.delete(itemNoteGenericDao.getById(idToDelete));
 
             Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
 
@@ -191,14 +237,14 @@ public class SearchItems extends HttpServlet {
         }
         else if (req.getParameter("editItemNote") != null) {
             int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item selectedItem = itemDao.getById(selectedItemId);
+            Item selectedItem = (Item) itemGenericDao.getById(selectedItemId);
 
             int idToEdit = Integer.parseInt(req.getParameter("item_note_id"));
 
             req.setAttribute("selectedItem", selectedItem);
             req.setAttribute("idToEdit", idToEdit);
 
-            ItemNote itemNoteToEdit = itemNoteDao.getById(idToEdit);
+            ItemNote itemNoteToEdit = (ItemNote) itemNoteGenericDao.getById(idToEdit);
             req.setAttribute("itemNoteToEdit", itemNoteToEdit);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/editItemNote.jsp");
@@ -206,17 +252,17 @@ public class SearchItems extends HttpServlet {
         }
         else if (req.getParameter("confirmEditNoteButton") != null) {
             int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item selectedItem = itemDao.getById(selectedItemId);
+            Item selectedItem = (Item) itemGenericDao.getById(selectedItemId);
 
             int idToEdit = Integer.parseInt(req.getParameter("note_id_to_edit"));
 
             String noteText = req.getParameter("noteText");
 
-            ItemNote itemNoteToUpdate = itemNoteDao.getById(idToEdit);
+            ItemNote itemNoteToUpdate = (ItemNote) itemNoteGenericDao.getById(idToEdit);
 
             itemNoteToUpdate.setNoteText(noteText);
 
-            itemNoteDao.saveOrUpdate(itemNoteToUpdate);
+            itemNoteGenericDao.saveOrUpdate(itemNoteToUpdate);
 
             selectedItem.setItemNote(itemNoteToUpdate);
 
@@ -229,7 +275,7 @@ public class SearchItems extends HttpServlet {
         }
         else if (req.getParameter("cancelEditNoteButton") != null) {
             int selectedItemId = Integer.parseInt(req.getParameter("selected_item_id"));
-            Item selectedItem = itemDao.getById(selectedItemId);
+            Item selectedItem = (Item) itemGenericDao.getById(selectedItemId);
 
             Set<ItemNote> itemNotesList = selectedItem.getItemNotes();
 
@@ -239,7 +285,7 @@ public class SearchItems extends HttpServlet {
             dispatcher.forward(req, res);
         }
         else {
-            req.setAttribute("items", itemDao.getAllItems());
+            req.setAttribute("items", itemGenericDao.getAll());
             RequestDispatcher dispatcher = req.getRequestDispatcher("/clothes.jsp");
             dispatcher.forward(req, res);
         }
