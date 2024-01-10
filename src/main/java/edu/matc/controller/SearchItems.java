@@ -68,23 +68,19 @@ public class SearchItems extends HttpServlet {
             String openWeatherMapKey = "99cb12ee7bf388635c3b8d6538da8e35";
 
             // Call 2nd API using GPS coordinates
-            String nationalWeatherServiceApiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&appid=" + openWeatherMapKey;
+            String nationalWeatherServiceApiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + x + "&lon=" + y + "&appid=" + openWeatherMapKey + "&units=imperial";
             target = client.target(nationalWeatherServiceApiUrl);
             response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
             JSONObject mainObject = new JSONObject(response);
 
             JSONObject windObject = mainObject.getJSONObject("wind");
-            double windSpeed = windObject.getInt("speed");
-            windSpeed = windSpeed * 2.2369;
+            int windSpeed = Math.round(windObject.getInt("speed"));
             String windSpeedString = windSpeed + " MPH";
 
             JSONObject tempObject = mainObject.getJSONObject("main");
-            int temperature = tempObject.getInt("temp");
-            temperature = (int) Math.round((temperature * 1.8) - 459.67);
+            int temperature = Math.round(tempObject.getInt("temp"));
             String temperatureString = temperature + " \u00B0" + "F";
-
-                    //
 
             String cityName = mainObject.getString("name");
 

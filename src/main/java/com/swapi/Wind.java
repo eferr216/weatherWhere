@@ -10,6 +10,9 @@ public class Wind{
 	@JsonProperty("speed")
 	private Object speed;
 
+	@JsonProperty("gust")
+	private Object gust;
+
 	public void setDeg(int deg){
 		this.deg = deg;
 	}
@@ -26,12 +29,21 @@ public class Wind{
 		return speed;
 	}
 
+	public void setGust(Object gust){
+		this.gust = gust;
+	}
+
+	public Object getGust(){
+		return gust;
+	}
+
 	@Override
  	public String toString(){
 		return 
 			"Wind{" + 
 			"deg = '" + deg + '\'' + 
 			",speed = '" + speed + '\'' + 
+			",gust = '" + gust + '\'' + 
 			"}";
 		}
 }

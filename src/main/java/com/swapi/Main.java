@@ -2,7 +2,7 @@ package com.swapi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Temperature{
+public class Main{
 
 	@JsonProperty("temp")
 	private Object temp;
@@ -21,6 +21,12 @@ public class Temperature{
 
 	@JsonProperty("temp_max")
 	private Object tempMax;
+
+	@JsonProperty("sea_level")
+	private Object seaLevel;
+
+	@JsonProperty("grnd_level")
+	private Object grndLevel;
 
 	public void setTemp(Object temp){
 		this.temp = temp;
@@ -70,10 +76,18 @@ public class Temperature{
 		return tempMax;
 	}
 
+	public void setSeaLevel(Object seaLevel) { this.seaLevel = seaLevel; }
+
+	public Object getSeaLevel() { return seaLevel; }
+
+	public void setGrndLevel(Object grndLevel) { this.grndLevel = grndLevel; }
+
+	public Object getGrndLevel() { return grndLevel; }
+
 	@Override
  	public String toString(){
 		return 
-			"Temperature{" + 
+			"Main{" + 
 			"temp = '" + temp + '\'' + 
 			",temp_min = '" + tempMin + '\'' + 
 			",humidity = '" + humidity + '\'' + 
