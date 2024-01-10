@@ -23,3 +23,9 @@ Week 7
 11/28/2023
 
 Enabled cognito functionality in my indie project (Weather Where). Implemented user logins.
+
+Week 8
+12/4/2023
+
+Incorporated an API service into my indie project. Used RoboPojo to generate Java classes from the response. Created a test case for the API service.
+

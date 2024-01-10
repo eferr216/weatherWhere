@@ -8,9 +8,9 @@ import static org.junit.Assert.assertEquals;
 public class SWAPIDaoTest {
 
     @Test
-    void getTemperatureSuccess() {
+    void getTimezoneSuccess() {
         SWAPIDao dao = new SWAPIDao();
         Forecast forecast = dao.getForecast("-89.3826","43.0778", "99cb12ee7bf388635c3b8d6538da8e35");
-        assertEquals(13, dao.getForecast("-89.3826","43.0778", "99cb12ee7bf388635c3b8d6538da8e35").getWind().getSpeed());
+        assertEquals(46800, dao.getForecast("-89.3826","43.0778", "99cb12ee7bf388635c3b8d6538da8e35").getTimezone());
     }
 }

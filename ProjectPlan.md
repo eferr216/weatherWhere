@@ -34,6 +34,12 @@
 #### This week's focus is to implement cognito functionality into my indie project.
 - [ ] Create and configure user pool so that user logins can be implemented.
 - [ ] Create a certificate so that indie project can be deployed as a Cognito app on Elastic Beanstalk.
+
+### Week 8
+#### This week's focus is to incorporate an API service into the Weather Where project.
+- [ ] Use a weather api to fetch weather data for user's zip code.
+- [ ] Use RoboPojo to map the response to corresponding Java classes
+- [ ] Create a test for the incorporated API service.
     
 
 
