@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Set;
 
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
 
@@ -88,6 +89,8 @@ public class SearchItems extends HttpServlet {
             req.setAttribute("city", cityName);
             req.setAttribute("temperature", temperatureString);
             req.setAttribute("windSpeed", windSpeedString);
+            HttpSession session = req.getSession();
+            String userName = (String) session.getAttribute("userName");
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
             dispatcher.forward(req, res);
@@ -113,8 +116,8 @@ public class SearchItems extends HttpServlet {
             dispatcher.forward(req, res);
         }
         else {
-            req.setAttribute("items", itemGenericDao.getAll());
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+            //req.setAttribute("items", itemGenericDao.getAll());
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
             dispatcher.forward(req, res);
         }
 

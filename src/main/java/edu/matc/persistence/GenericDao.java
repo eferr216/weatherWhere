@@ -99,22 +99,6 @@ public class GenericDao<T> {
     }
 
     /**
-     * This method gets an item by itemCategory.
-     * @return an item
-     */
-    public List<T> getItemsByCategory(String itemCategory) {
-        Session session = getSession();
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        Expression<String> propertyPath = root.get("itemCategory");
-        query.where(builder.like(propertyPath, "%" + itemCategory + "%"));
-        List<T> list = session.createQuery(query).getResultList();
-        session.close();
-        return list;
-    }
-
-    /**
      * Get entity by property (exact match)
      * sample usage: getByPropertyEqual("itemNoteCategory", "Pants")
      */

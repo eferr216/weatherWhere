@@ -37,15 +37,6 @@ class ItemDaoTest {
     }
 
     /**
-     * Gets items by category success.
-     */
-    @Test
-    void getItemsByCategorySuccess() {
-        List<Item> items = genericDao.getItemsByCategory("G");
-        assertEquals(2, items.size());
-    }
-
-    /**
      * Verifies an item is returned correctly based on id search.
      */
     @Test

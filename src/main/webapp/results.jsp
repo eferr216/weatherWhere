@@ -18,7 +18,14 @@
             <p><span class="weatherResultsPropertyLabel">Wind Speed:</span> ${windSpeed}</p>
         </div>
         <br>
-        ${mainObject}
+        <c:choose>
+            <c:when test="${not empty userName}">
+                <p class="resultsPageOutfitRecText">Would you like an outfit recommendation? <a href="/outfits">Click here</a>.</p>
+            </c:when>
+            <c:otherwise>
+                <p class="resultsPageOutfitRecText">Would you like an outfit recommendation? If so, <a href="logIn">Log In</a>.</p>
+            </c:otherwise>
+        </c:choose>
         <br>
     </div>
 </main>

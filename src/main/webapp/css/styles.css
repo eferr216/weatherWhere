@@ -116,6 +116,10 @@ input[type="submit"]:active {
     margin-top: 10px;
 }
 
+.resultsPageOutfitRecText {
+    text-align: center;
+}
+
 .submissionButtonsDiv {
     display: block;
 }
