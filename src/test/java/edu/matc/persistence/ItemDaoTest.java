@@ -54,9 +54,9 @@ class ItemDaoTest {
        String newItemName = "Default Item Name";
        Item itemToUpdate = (Item) genericDao.getById(3);
        itemToUpdate.setItemName(newItemName);
-        genericDao.saveOrUpdate(itemToUpdate);
+       genericDao.saveOrUpdate(itemToUpdate);
        Item retrievedItem = (Item) genericDao.getById(3);
-       assertEquals(newItemName, retrievedItem.getItemName());
+       assertEquals(retrievedItem, itemToUpdate);
     }
 
     /**
@@ -65,11 +65,10 @@ class ItemDaoTest {
     @Test
     void insertSuccess() {
 
-        Item newItem = new Item(56,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
+        Item newItem = new Item(61,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
         int id = genericDao.insert(newItem);
-        assertEquals(56, id);
         Item insertedItem = (Item) genericDao.getById(id);
-        assertEquals("Yellow boots", insertedItem.getItemName());
+        assertEquals(insertedItem, newItem);
     }
 
     @Test
@@ -85,7 +84,7 @@ class ItemDaoTest {
         int id = genericDao.insert(newItem);
         assertNotEquals(0,id);
         Item insertedItem = (Item) genericDao.getById(id);
-        assertEquals("Wool scarf", insertedItem.getItemName());
+        assertEquals(insertedItem, newItem);
 
     }
 

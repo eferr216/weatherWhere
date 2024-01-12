@@ -60,7 +60,7 @@ public class ItemNoteDaoTest {
         itemNoteToUpdate.setNoteText(newItemNoteText);
         genericDao.saveOrUpdate(itemNoteToUpdate);
         ItemNote retrievedItemNote = (ItemNote) genericDao.getById(3);
-        assertEquals(newItemNoteText, retrievedItemNote.getNoteText());
+        assertEquals(retrievedItemNote, itemNoteToUpdate);
     }
 
     /**
@@ -78,8 +78,7 @@ public class ItemNoteDaoTest {
 
         assertNotEquals(0, id);
         ItemNote insertedItemNote = (ItemNote) genericDao.getById(id);
-        assertEquals("This is a new note for test purposes", insertedItemNote.getNoteText());
-        assertNotNull(insertedItemNote.getItem());
+        assertEquals(insertedItemNote, newItemNote);
     }
 
     /**
