@@ -93,8 +93,58 @@ public class SearchItems extends HttpServlet {
         }
         else if (clickedLink.equals("outfitRecommendation")) {
             HttpSession session = req.getSession();
+
             String temp = (String) session.getAttribute("temperature");
-            String windSpeed = (String) session.getAttribute("windSpeed");
+            StringBuffer buffer = new StringBuffer(temp);
+            buffer.delete(temp.length() - 3, temp.length());
+            temp = buffer.toString();
+            int tempInt = Integer.parseInt(temp);
+
+            /*String windSpeed = (String) session.getAttribute("windSpeed");
+            StringBuffer bufferTwo = new StringBuffer(windSpeed);
+            bufferTwo.delete(windSpeed.length() - 3, windSpeed.length());
+            windSpeed = bufferTwo.toString();
+            int windSpeedInt = Integer.parseInt(windSpeed);*/
+
+            if (tempInt < 65) {
+                List<Item> sweaters = itemGenericDao.getByPropertyEqual("itemCategory", "Sweaters");
+
+                int sweatersIntSelection = itemGenericDao.getRandomInt(sweaters.size());
+
+                Item sweatersSelection = sweaters.get(sweatersIntSelection);
+
+                session.setAttribute("sweatersSelection", sweatersSelection);
+            }
+            if (tempInt < 45) {
+                List<Item> lightJackets = itemGenericDao.getByPropertyEqual("itemCategory", "Light jackets");
+
+                int lightJacketsIntSelection = itemGenericDao.getRandomInt(lightJackets.size());
+
+                Item lightJacketsSelection = lightJackets.get(lightJacketsIntSelection);
+
+                session.setAttribute("lightJacketsSelection", lightJacketsSelection);
+            }
+            if (tempInt < 26) {
+                List<Item> gloves = itemGenericDao.getByPropertyEqual("itemCategory", "Gloves");
+                List<Item> scarves = itemGenericDao.getByPropertyEqual("itemCategory", "Scarves");
+                List<Item> earMuffs = itemGenericDao.getByPropertyEqual("itemCategory", "Ear muffs");
+                List<Item> heavyJackets = itemGenericDao.getByPropertyEqual("itemCategory", "Heavy jackets");
+
+                int glovesIntSelection = itemGenericDao.getRandomInt(gloves.size());
+                int scarvesIntSelection = itemGenericDao.getRandomInt(scarves.size());
+                int earMuffsIntSelection = itemGenericDao.getRandomInt(earMuffs.size());
+                int heavyJacketsIntSelection = itemGenericDao.getRandomInt(heavyJackets.size());
+
+                Item glovesSelection = gloves.get(glovesIntSelection);
+                Item scarvesSelection = scarves.get(scarvesIntSelection);
+                Item earMuffsSelection = earMuffs.get(earMuffsIntSelection);
+                Item heavyJacketsSelection = heavyJackets.get(heavyJacketsIntSelection);
+
+                session.setAttribute("glovesSelection", glovesSelection);
+                session.setAttribute("scarvesSelection", scarvesSelection);
+                session.setAttribute("earMuffsSelection", earMuffsSelection);
+                session.setAttribute("heavyJacketsSelection", heavyJacketsSelection);
+            }
 
             // Build a list of all default Items
             List<Item> footwear = itemGenericDao.getByPropertyEqual("itemCategory", "Footwear");
@@ -102,27 +152,11 @@ public class SearchItems extends HttpServlet {
             List<Item> shirts = itemGenericDao.getByPropertyEqual("itemCategory", "Shirts");
             List<Item> legwear = itemGenericDao.getByPropertyEqual("itemCategory", "Legwear");
 
-            List<Item> sweaters = itemGenericDao.getByPropertyEqual("itemCategory", "Sweaters");
-            List<Item> lightJackets = itemGenericDao.getByPropertyEqual("itemCategory", "Light jackets");
-
-            List<Item> gloves = itemGenericDao.getByPropertyEqual("itemCategory", "Gloves");
-            List<Item> scarves = itemGenericDao.getByPropertyEqual("itemCategory", "Scarves");
-            List<Item> earMuffs = itemGenericDao.getByPropertyEqual("itemCategory", "Ear muffs");
-            List<Item> heavyJackets = itemGenericDao.getByPropertyEqual("itemCategory", "Heavy jackets");
-
             // Randomly generated number will determine which Item is picked
             int footwearIntSelection = itemGenericDao.getRandomInt(footwear.size());
             int socksIntSelection = itemGenericDao.getRandomInt(socks.size());
             int shirtsIntSelection = itemGenericDao.getRandomInt(shirts.size());
             int legwearIntSelection = itemGenericDao.getRandomInt(legwear.size());
-
-            int sweatersIntSelection = itemGenericDao.getRandomInt(sweaters.size());
-            int lightJacketsIntSelection = itemGenericDao.getRandomInt(lightJackets.size());
-
-            int glovesIntSelection = itemGenericDao.getRandomInt(gloves.size());
-            int scarvesIntSelection = itemGenericDao.getRandomInt(scarves.size());
-            int earMuffsIntSelection = itemGenericDao.getRandomInt(earMuffs.size());
-            int heavyJacketsIntSelection = itemGenericDao.getRandomInt(heavyJackets.size());
 
             // Get the chosen item from each category
             Item footwearSelection = footwear.get(footwearIntSelection);
@@ -130,24 +164,10 @@ public class SearchItems extends HttpServlet {
             Item shirtsSelection = shirts.get(shirtsIntSelection);
             Item legwearSelection = legwear.get(legwearIntSelection);
 
-            Item sweatersSelection = sweaters.get(sweatersIntSelection);
-            Item lightJacketsSelection = lightJackets.get(lightJacketsIntSelection);
-
-            Item glovesSelection = gloves.get(glovesIntSelection);
-            Item scarvesSelection = scarves.get(scarvesIntSelection);
-            Item earMuffsSelection = earMuffs.get(earMuffsIntSelection);
-            Item heavyJacketsSelection = heavyJackets.get(heavyJacketsIntSelection);
-
             session.setAttribute("footwearSelection", footwearSelection);
             session.setAttribute("socksSelection", socksSelection);
             session.setAttribute("shirtsSelection", shirtsSelection);
             session.setAttribute("legwearSelection", legwearSelection);
-            session.setAttribute("sweatersSelection", sweatersSelection);
-            session.setAttribute("lightJacketsSelection", lightJacketsSelection);
-            session.setAttribute("glovesSelection", glovesSelection);
-            session.setAttribute("scarvesSelection", scarvesSelection);
-            session.setAttribute("earMuffsSelection", earMuffsSelection);
-            session.setAttribute("heavyJacketsSelection", heavyJacketsSelection);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/services/outfits");
             dispatcher.forward(req, res);
