@@ -40,6 +40,11 @@
 - [ ] Use a weather api to fetch weather data for user's zip code.
 - [ ] Use RoboPojo to map the response to corresponding Java classes
 - [ ] Create a test for the incorporated API service.
+
+### Week 9
+#### This week's focus is to incorporate a RESTful Web Service into the Weather Where project.
+- [ ] Use RESTful Web Service to make calls to generate 'outfit recommendations'.
+- [ ] Implement methods and functionality to generate outfit recommendations.
     
 
 

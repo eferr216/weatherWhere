@@ -29,3 +29,8 @@ Week 8
 
 Incorporated an API service into my indie project. Used RoboPojo to generate Java classes from the response. Created a test case for the API service.
 
+Week 9
+12/10/2023
+
+Added 2nd REST API service into my indie project. Implemented the 'outfit recommendation' feature of the Weather Where indie project.
+

@@ -31,3 +31,9 @@ Created and configured user pool for my indie project. Deployed my indie project
 -10 hours
 
 In order to get the relevant data for my indie project I needed to call 2 seperate APIs. The first API allowed me to get the GPS coordinates of a user's zip code. This information (coordinates) were then fed to the 2nd API which was then able to provide me with the weather data that I needed. This was the easy part. I then went on to struggle with how to correctly create the corresponding Java classes from the API's response. This was mostly due to the fact that the JSON object that was being returned had other JSON objects that were nested inside of it. At first I tried feeding RoboPojo the nested objects on their own although this seemed to cause more issues than it solved. I eventually opted for feeding RoboPojo the entire JSON response after figuring this is probably the best approach for what the assignment is asking. Fingers crossed!
+
+### Week 9 work
+
+-18 hours
+
+I spent quite some time just figuring out where to place my files that contained the @Path and @ApplicationPath annotations. I then spent a good amount of time just wiring everything up and ensuring that I was successfully generating outfit recommendations based on current weather conditions. All outfit recommendations are created dynamically and are not stored in a database table.
