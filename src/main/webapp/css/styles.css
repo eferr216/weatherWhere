@@ -116,6 +116,19 @@ input[type="submit"]:active {
     margin-top: 10px;
 }
 
+.outfitRecInfoDiv {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.outfitRecInfoDiv p {
+    text-align: center;
+}
+
+.outfitRecInfoLabel {
+    font-weight: bold;
+}
+
 .resultsPageOutfitRecText {
     text-align: center;
 }

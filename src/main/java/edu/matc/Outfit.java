@@ -1,6 +1,5 @@
 package edu.matc;
 
-import edu.matc.entity.Item;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.GET;
@@ -14,24 +13,11 @@ public class Outfit {
     // The Java method will process HTTP GET requests
     @GET
     // The Java method will produce content identified by the MIME Media type "text/plain"
-    @Produces("text/plain")
+    @Produces("text/html")
     public Response getMesssage(@Context HttpServletRequest req) {
         HttpSession session = req.getSession();
         String temp = (String) session.getAttribute("temperature");
         String windSpeed = (String) session.getAttribute("windSpeed");
-
-        /*Item footwearSelection = (Item) session.getAttribute("footwearSelection");
-        Item socksSelection = (Item) session.getAttribute("socksSelection");
-        Item shirtsSelection = (Item) session.getAttribute("shirtsSelection");
-        Item legwearSelection = (Item) session.getAttribute("legwearSelection");
-
-        Item sweatersSelection = (Item) session.getAttribute("sweatersSelection");
-        Item lightJacketsSelection = (Item) session.getAttribute("lightJacketsSelection");
-
-        Item glovesSelection = (Item) session.getAttribute("glovesSelection");
-        Item scarvesSelection = (Item) session.getAttribute("scarvesSelection");
-        Item earMuffsSelection = (Item) session.getAttribute("earMuffsSelection");
-        Item heavyJacketsSelection = (Item) session.getAttribute("heavyJacketsSelection");*/
 
         String footwearName = (String) session.getAttribute("footwearName");
         String footwearDescription = (String) session.getAttribute("footwearDescription");
@@ -64,28 +50,26 @@ public class Outfit {
         String heavyJacketDescription = (String) session.getAttribute("heavyJacketDescription");
 
         // Return a simple message
-        String output = "Temp: " + temp + ", Wind Speed: " + windSpeed
-                    + ", Footwear: " + footwearName + "; " + footwearDescription
-                    + ", Socks: " + socksName + "; " + socksDescription
-                    + ", Shirt: " + shirtName + "; " + shirtDescription
-                    + ", Legwear: " + legwearName + "; " + legwearDescription
-                    + ", Sweater: " + sweaterName + "; " + sweaterDescription
-                    + ", Light Jacket: " + lightJacketName + "; " + lightJacketDescription
-                    + ", Gloves: " + glovesName + "; " + glovesDescription
-                    + ", Scarf: " + scarfName + "; " + scarfDescription
-                    + ", Ear Muffs: " + earMuffsName + "; " + earMuffsDescription
-                + ", Heavy Jacket: " + heavyJacketName + "; " + heavyJacketDescription;
+        String output = "<html lang='en'><head><title>" + "Weather Where" + "</title>"
+                + "<meta charset='UTF-8'>"
+                + "    <meta name='viewport' content='width=device-width, initial-scale=1'>"
+                + "    <link rel='stylesheet' href='css/styles.css'>"
+                + "</head><body>"
+                + "<main><div class='mainContent'><h1>" + "Outfit Recommendation" + "</h1>"
+                + "<div class='outfitRecInfoDiv'><p><span class='outfitRecInfoLabel'>Temperature: </span>" + temp + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Wind Speed: </span>" + windSpeed + "</p></div><br>"
+                + "<div class='outfitRecInfoDiv'><p><span class='outfitRecInfoLabel'>Footwear: </span>" + footwearName + "; " + footwearDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Socks: </span>" + socksName + "; " + socksDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Shirt: </span>" + shirtName + "; " + shirtDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Legwear: </span>" + legwearName + "; " + legwearDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Sweater: </span>" + sweaterName + "; " + sweaterDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Light Jacket: </span>" + lightJacketName + "; " + lightJacketDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Gloves: </span>" + glovesName + "; " + glovesDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Scarf: </span>" + scarfName + "; " + scarfDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Ear Muffs: </span>" + earMuffsName + "; " + earMuffsDescription + "</p>"
+                + "<p><span class='outfitRecInfoLabel'>Heavy Jacket: </span>" + heavyJacketName + "; " + heavyJacketDescription + "</p></div></div></main></body></html>";
 
         return Response.status(200).entity(output).build();
     }
 
-    @GET
-    @Path("/outfitId")
-    // The Java method will produce content identified by the MIME Media type "text/plain"
-    @Produces("text/plain")
-    public Response getSpecificIdMesssage() {
-        // Return a simple message
-        String output = "this is an outfit with a specific id.";
-        return Response.status(200).entity(output).build();
-    }
 }
