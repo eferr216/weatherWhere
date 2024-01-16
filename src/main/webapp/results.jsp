@@ -20,7 +20,7 @@
         <br>
         <c:choose>
             <c:when test="${not empty userName}">
-                <p class="resultsPageOutfitRecText">Would you like an outfit recommendation? <a href="/outfits">Click here</a>.</p>
+                <p class="resultsPageOutfitRecText">Would you like an outfit recommendation? <a href="searchItem?link=outfitRecommendation"><!--<a href="/services/outfits">-->Click here</a>.</p>
             </c:when>
             <c:otherwise>
                 <p class="resultsPageOutfitRecText">Would you like an outfit recommendation? If so, <a href="logIn">Log In</a>.</p>

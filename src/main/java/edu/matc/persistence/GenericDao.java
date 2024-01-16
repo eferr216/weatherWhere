@@ -13,6 +13,7 @@ import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 
 import java.util.List;
+import java.util.Random;
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
@@ -146,4 +147,14 @@ public class GenericDao<T> {
         return SessionFactoryProvider.getSessionFactory().openSession();
     }
 
+    public int getRandomInt(int size) {
+        int min = 1;
+        int max = size;
+        Random random = new Random();
+
+        int randomNumber = random.nextInt((max - min) + 1);
+        int randomNum = randomNumber + min;
+
+        return randomNum - 1;
+    }
 }
