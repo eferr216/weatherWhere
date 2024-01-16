@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import com.eferreira.persistence.SWAPIDao;
+import com.swapi.Forecast;
 import edu.matc.entity.Item;
 import edu.matc.entity.ItemNote;
 import edu.matc.persistence.GenericDao;
@@ -32,7 +34,6 @@ public class SearchItems extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        //ItemDao itemDao = new ItemDao();
         GenericDao itemGenericDao = new GenericDao(Item.class);
 
         String clickedLink = req.getParameter("link");
@@ -108,20 +109,28 @@ public class SearchItems extends HttpServlet {
 
             if (tempInt < 65) {
                 List<Item> sweaters = itemGenericDao.getByPropertyEqual("itemCategory", "Sweaters");
-
                 int sweatersIntSelection = itemGenericDao.getRandomInt(sweaters.size());
-
                 Item sweatersSelection = sweaters.get(sweatersIntSelection);
+                JSONObject sweaterObject = new JSONObject(sweatersSelection);
 
+                String sweaterName = sweaterObject.getString("itemName");
+                String sweaterDescription = sweaterObject.getString("itemDescription");
+
+                session.setAttribute("sweaterName", sweaterName);
+                session.setAttribute("sweaterDescription", sweaterDescription);
                 session.setAttribute("sweatersSelection", sweatersSelection);
             }
             if (tempInt < 45) {
                 List<Item> lightJackets = itemGenericDao.getByPropertyEqual("itemCategory", "Light jackets");
-
                 int lightJacketsIntSelection = itemGenericDao.getRandomInt(lightJackets.size());
-
                 Item lightJacketsSelection = lightJackets.get(lightJacketsIntSelection);
+                JSONObject lightJacketObject = new JSONObject(lightJacketsSelection);
 
+                String lightJacketName = lightJacketObject.getString("itemName");
+                String lightJacketDescription = lightJacketObject.getString("itemDescription");
+
+                session.setAttribute("lightJacketName", lightJacketName);
+                session.setAttribute("lightJacketDescription", lightJacketDescription);
                 session.setAttribute("lightJacketsSelection", lightJacketsSelection);
             }
             if (tempInt < 26) {
@@ -140,9 +149,37 @@ public class SearchItems extends HttpServlet {
                 Item earMuffsSelection = earMuffs.get(earMuffsIntSelection);
                 Item heavyJacketsSelection = heavyJackets.get(heavyJacketsIntSelection);
 
+                JSONObject glovesObject = new JSONObject(glovesSelection);
+                JSONObject scarfObject = new JSONObject(scarvesSelection);
+                JSONObject earMuffsObject = new JSONObject(earMuffsSelection);
+                JSONObject heavyJacketObject = new JSONObject(heavyJacketsSelection);
+
+                String glovesName = glovesObject.getString("itemName");
+                String glovesDescription = glovesObject.getString("itemDescription");
+
+                String scarfName = scarfObject.getString("itemName");
+                String scarfDescription = scarfObject.getString("itemDescription");
+
+                String earMuffsName = earMuffsObject.getString("itemName");
+                String earMuffsDescription = earMuffsObject.getString("itemDescription");
+
+                String heavyJacketName = heavyJacketObject.getString("itemName");
+                String heavyJacketDescription = heavyJacketObject.getString("itemDescription");
+
+                session.setAttribute("glovesName", glovesName);
+                session.setAttribute("glovesDescription", glovesDescription);
                 session.setAttribute("glovesSelection", glovesSelection);
+
+                session.setAttribute("scarfName", scarfName);
+                session.setAttribute("scarfDescription", scarfDescription);
                 session.setAttribute("scarvesSelection", scarvesSelection);
+
+                session.setAttribute("earMuffsName", earMuffsName);
+                session.setAttribute("earMuffsDescription", earMuffsDescription);
                 session.setAttribute("earMuffsSelection", earMuffsSelection);
+
+                session.setAttribute("heavyJacketName", heavyJacketName);
+                session.setAttribute("heavyJacketDescription", heavyJacketDescription);
                 session.setAttribute("heavyJacketsSelection", heavyJacketsSelection);
             }
 
@@ -164,10 +201,39 @@ public class SearchItems extends HttpServlet {
             Item shirtsSelection = shirts.get(shirtsIntSelection);
             Item legwearSelection = legwear.get(legwearIntSelection);
 
+            JSONObject footwearObject = new JSONObject(footwearSelection);
+            JSONObject socksObject = new JSONObject(socksSelection);
+            JSONObject shirtsObject = new JSONObject(shirtsSelection);
+            JSONObject legwearObject = new JSONObject(legwearSelection);
+
+
+            String footwearName = footwearObject.getString("itemName");
+            String footwearDescription = footwearObject.getString("itemDescription");
+
+            String socksName = socksObject.getString("itemName");
+            String socksDescription =socksObject.getString("itemDescription");
+
+            String shirtName = shirtsObject.getString("itemName");
+            String shirtDescription = shirtsObject.getString("itemDescription");
+
+            String legwearName = legwearObject.getString("itemName");
+            String legwearDescription = legwearObject.getString("itemDescription");
+
             session.setAttribute("footwearSelection", footwearSelection);
+            session.setAttribute("footwearName", footwearName);
+            session.setAttribute("footwearDescription", footwearDescription);
+
             session.setAttribute("socksSelection", socksSelection);
+            session.setAttribute("socksName", socksName);
+            session.setAttribute("socksDescription", socksDescription);
+
             session.setAttribute("shirtsSelection", shirtsSelection);
+            session.setAttribute("shirtName", shirtName);
+            session.setAttribute("shirtDescription", shirtDescription);
+
             session.setAttribute("legwearSelection", legwearSelection);
+            session.setAttribute("legwearName", legwearName);
+            session.setAttribute("legwearDescription", legwearDescription);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/services/outfits");
             dispatcher.forward(req, res);
