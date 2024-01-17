@@ -20,17 +20,8 @@
         <mapping class="edu.matc.entity.Item"/>
         <mapping class="edu.matc.entity.ItemNote"/>
 
-        <!--<property name="connection.username">root</property>
-        <property name="connection.password">student</property>-->
-
-        <!--<mapping class="com.paulawaite.fbtr.entity.Difficulty"/>
-        <mapping class="com.paulawaite.fbtr.entity.GroomingType"/>
-        <mapping class="com.paulawaite.fbtr.entity.Role"/>
-        <mapping class="com.paulawaite.fbtr.entity.Trail"/>
-        <mapping class="com.paulawaite.fbtr.entity.TrailReport"/>
-        <mapping class="com.paulawaite.fbtr.entity.TrailType"/>
-        <mapping class="com.paulawaite.fbtr.entity.User"/>
-        <mapping class="com.paulawaite.fbtr.entity.Location"/>-->
+        <mapping class="edu.matc.rest.OutfitAPI"/>
+        <mapping class="edu.matc.rest.WeatherWhereApplication"/>
 
     </session-factory>
 

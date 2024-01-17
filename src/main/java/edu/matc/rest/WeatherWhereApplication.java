@@ -1,4 +1,4 @@
-package edu.matc;
+package edu.matc.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -15,7 +15,7 @@ public class WeatherWhereApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(Outfit.class);
+        h.add(OutfitAPI.class);
         /*h.add(Auth.class);
         h.add(Login.class);
         h.add(SearchItems.class);*/
