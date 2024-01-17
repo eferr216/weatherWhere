@@ -9,6 +9,9 @@ import javax.servlet.http.HttpSession;
 import javax.ws.rs.core.Context;
 import java.util.List;
 
+/**
+ * This class holds all operations and properties associated with generated outfits.
+ */
 public class Outfit {
 
     /**
@@ -17,6 +20,12 @@ public class Outfit {
     public Outfit() {
     }
 
+    /**
+     * This method creates and returns the String that will be output
+     * when the OutfitAPI is called.
+     * @param req the servlet request
+     * @return the API's output String
+     */
     public String getApiOutputString(@Context HttpServletRequest req) {
         HttpSession session = req.getSession();
         GenericDao itemGenericDao = new GenericDao(Item.class);
@@ -130,7 +139,6 @@ public class Outfit {
         JSONObject socksObject = new JSONObject(socksSelection);
         JSONObject shirtsObject = new JSONObject(shirtsSelection);
         JSONObject legwearObject = new JSONObject(legwearSelection);
-
 
         String footwearName = footwearObject.getString("itemName");
         String footwearDescription = footwearObject.getString("itemDescription");

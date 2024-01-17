@@ -1,18 +1,11 @@
 package edu.matc.rest;
 
-import edu.matc.entity.Item;
-import edu.matc.persistence.GenericDao;
-import org.json.JSONObject;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
-import java.util.List;
 
 @Path("/outfits")
 public class OutfitAPI {
