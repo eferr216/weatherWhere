@@ -1,7 +1,5 @@
 package edu.matc.controller;
 
-import com.eferreira.persistence.SWAPIDao;
-import com.swapi.Forecast;
 import edu.matc.entity.Item;
 import edu.matc.entity.ItemNote;
 import edu.matc.persistence.GenericDao;

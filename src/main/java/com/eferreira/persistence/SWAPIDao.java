@@ -3,13 +3,15 @@ package com.eferreira.persistence;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swapi.Forecast;
-
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
+/**
+ * This class...
+ */
 public class SWAPIDao {
     public Forecast getForecast(String x, String y, String openWeatherMapKey) {
         Client client = ClientBuilder.newClient();

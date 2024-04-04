@@ -5,9 +5,7 @@ import edu.matc.entity.ItemNote;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -41,9 +39,9 @@ class ItemDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        Item retrievedItem = (Item) genericDao.getById(5);
+        Item retrievedItem = (Item) genericDao.getById(1);
         assertNotNull(retrievedItem);
-        assertEquals("Snowpants", retrievedItem.getItemName());
+        assertEquals("Red gloves", retrievedItem.getItemName());
     }
 
     /**
@@ -65,7 +63,7 @@ class ItemDaoTest {
     @Test
     void insertSuccess() {
 
-        Item newItem = new Item(61,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
+        Item newItem = new Item(6,"Yellow boots", "Yellow boots made for snowy climates", "Footwear");
         int id = genericDao.insert(newItem);
         Item insertedItem = (Item) genericDao.getById(id);
         assertEquals(insertedItem, newItem);
@@ -74,7 +72,7 @@ class ItemDaoTest {
     @Test
     void insertWithItemNoteSuccess() {
 
-        Item newItem = new Item(6, "Wool scarf", "A red wool scarf made in Alaska.", "Headwear");
+        Item newItem = new Item(7, "Wool scarf", "A red wool scarf made in Alaska.", "Headwear");
 
         String noteText = "This scarf is a little itchy at times.";
         ItemNote itemNote = new ItemNote(noteText, newItem);
@@ -112,7 +110,7 @@ class ItemDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Item> items = genericDao.getByPropertyLike("itemCategory", "Pants");
+        List<Item> items = genericDao.getByPropertyLike("itemCategory", "Sweaters");
         assertEquals(1, items.size());
     }
 }
